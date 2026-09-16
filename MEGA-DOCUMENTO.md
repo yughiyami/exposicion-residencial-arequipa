@@ -624,7 +624,7 @@ Una **capa de agregación y estandarización de información predial** que entre
 | Canales | Grupos de compraventa en redes sociales; Colegio de Arquitectos filial Arequipa; referidos |
 | Ingresos | Consulta básica gratuita; reporte de pago; suscripción institucional — modelo híbrido Kadaster |
 | Costos | **Digitalización y mantenimiento de la capa de zonificación** |
-| Ventaja injusta | **Revisada.** La zonificación digitalizada ya no es foso exclusivo: UbicaBien la ofrece. La barrera defendible es la **capa registral más el conocimiento del mecanismo de fraude local** |
+| Ventaja injusta | **Confirmada por auditoría.** UbicaBien devuelve la zonificación como «Próximamente» en los nueve campos: no la digitalizó en un año. La barrera sigue abierta, reforzada por la **capa registral**, ausente en su hoja de ruta |
 
 ## 9.5 Arquitectura funcional
 

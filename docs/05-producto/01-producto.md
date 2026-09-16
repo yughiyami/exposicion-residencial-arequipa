@@ -38,6 +38,9 @@ Coordenada en mapa, dirección, o enlace de un aviso publicado.
 | 3 | Peligro físico | SIGRID — CENEPRED, ANA, GEOIDEP | Variable según cobertura |
 | 4 | Servicios | **Proxy declarado** — proximidad a red, habilitación, historial de cortes | **Bajo, etiquetado** |
 | 5 | Exposición delictiva | MININTER, calibrado con victimización INEI/UCSP | Medio |
+| **6** | **Derechos mineros** | **INGEMMET — concesiones tituladas** | **Alto** |
+
+> El **vertical 6** se incorpora tras la auditoría de UbicaBien: su reporte detectó que el pin de prueba en Yura «se superpone a un derecho minero titulado». Es una causa real de imposibilidad de habilitar que este repositorio no había considerado. Crédito al competidor.
 
 ---
 
@@ -65,7 +68,7 @@ Esta sección es tan importante como la anterior, y responde directamente a la l
 | **Canales** | Grupos de compraventa en redes sociales — el mismo canal donde hoy se publican las ofertas fraudulentas; alianza con el Colegio de Arquitectos filial Arequipa; referidos de afectados |
 | **Modelo de ingresos** | Consulta básica gratuita como captación; reporte consolidado de pago; suscripción por volumen en el segmento institucional. Estructura tomada del modelo híbrido del Kadaster neerlandés |
 | **Estructura de costos** | Concentrada en la **digitalización y mantenimiento de la capa de zonificación**. La infraestructura de cómputo es marginal |
-| **Ventaja injusta** | **Revisada tras el hallazgo de [UbicaBien](../04-startups/ubicabien.md).** La zonificación digitalizada ya no puede declararse como foso exclusivo: el competidor la ofrece. La barrera defendible es la **capa registral (SUNARP) más el conocimiento del mecanismo de fraude local** —predio rústico vendido como urbano, predio del Estado— que ningún competidor cubre en su oferta pública |
+| **Ventaja injusta** | **Confirmada por auditoría del competidor (16-09-2026).** UbicaBien devuelve la zonificación como «Próximamente» en los nueve campos: **no la ha digitalizado en un año, con un CTO dedicado y una CEO especialista en planificación territorial.** La barrera es real y sigue abierta. Se refuerza con la **capa registral (SUNARP)**, ausente y no anunciada en su hoja de ruta. Ver [auditoría](../04-startups/ubicabien-auditoria.md) |
 
 ---
 
@@ -138,7 +141,7 @@ SUNARP     Capa propia  SIGRID      Proxy      MININTER
 | R6 | Resistencia gremial del sector inmobiliario | Media | Metodología pública y auditable; el ataque a First Street fue por exactitud, no por la idea |
 | R7 | El Estado cierra el vacío | Baja en el corto plazo | Declarado como horizonte de obsolescencia. La evidencia comparada —3 144 jurisdicciones sin estandarizar en 150 años— sugiere que el vacío municipal es estructural |
 | R8 | **[UbicaBien](../04-startups/ubicabien.md) opera en Arequipa desde 2026 con respaldo de ProInnóvate y cubre valorización, zonificación, conectividad y desastres** | **Crítica** | Estrechar el posicionamiento a **registral + habilitación urbana**, segmento de comprador único del borde informal y cobro por evento. Excluir valorización del alcance. Ejecutar V1–V4 antes de sostener la diferenciación |
-| R9 | **Si UbicaBien ya digitalizó la zonificación de Arequipa, la ventaja injusta declarada está tomada** | **Crítica** | Verificación V2. Si se confirma, la barrera pasa a ser la capa registral y el conocimiento del mecanismo de fraude local |
+| ~~R9~~ | ~~Si UbicaBien ya digitalizó la zonificación, la ventaja injusta está tomada~~ | **CERRADO** | Auditoría V2 del 16-09-2026: la zonificación de UbicaBien devuelve «Próximamente» en los nueve campos. **La barrera sigue abierta.** Ver [auditoría](../04-startups/ubicabien-auditoria.md) |
 
 ---
 

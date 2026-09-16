@@ -185,7 +185,7 @@ Esa es la pregunta cuyo trámite exige hoy una memoria descriptiva firmada por p
 
 | # | Amenaza | Severidad |
 |---|---|---|
-| T1 | **Si UbicaBien ya digitalizó la zonificación de Arequipa, la ventaja competitiva propuesta está tomada** | **Crítica** |
+| ~~T1~~ | ~~Si UbicaBien ya digitalizó la zonificación de Arequipa, la ventaja competitiva propuesta está tomada~~ | **DESCARTADA** — auditoría V2: la zonificación devuelve «Próximamente» en los nueve campos |
 | T2 | Agregar la capa registral es una funcionalidad de hoja de ruta, no un foso: pueden cerrarla | **Alta** |
 | T3 | Ventaja de tiempo: están lanzados, con planes de pago activos y usuarios reales | Alta |
 | T4 | Respaldo de ProInnóvate, StartUp Perú e Innicia (UCSM): capital y red institucional en la misma ciudad | Alta |
@@ -202,7 +202,16 @@ Esa es la pregunta cuyo trámite exige hoy una memoria descriptiva firmada por p
 | V3 | Probar una ubicación **sin habilitación urbana** | Verificar si el producto detecta el mecanismo de fraude dominante en Arequipa |
 | V4 | Revisar su cobertura fuera del cercado consolidado | Determinar si cubren Cerro Colorado, Yura y Characato |
 
-> Hasta ejecutar V1–V4, toda afirmación sobre lo que UbicaBien **no** cubre es una inferencia a partir de su sitio público, no un hecho verificado. Debe presentarse como tal.
+> **ACTUALIZACIÓN — V1 a V4 EJECUTADAS el 16 de septiembre de 2026.** Los resultados están en [`ubicabien-auditoria.md`](ubicabien-auditoria.md). Resumen:
+>
+> | # | Resultado |
+> |---|---|
+> | **V1** — ¿capa registral? | **NO.** Ausente y no anunciada |
+> | **V2** — ¿zonificación digitalizada? | **NO.** Los nueve campos devuelven «Próximamente» |
+> | **V3** — ¿detectan suelo no habilitable? | **Parcial.** Detectan concesión minera de INGEMMET, no condición de habilitación urbana |
+> | **V4** — ¿cubren el borde periurbano? | **Cobertura sí, utilidad no.** El valorizador devuelve comparables de otros distritos |
+>
+> Las afirmaciones de este documento dejan de ser inferencia y pasan a ser hallazgos verificados.
 
 ---
 
