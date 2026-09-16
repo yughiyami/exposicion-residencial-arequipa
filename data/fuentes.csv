@@ -1,0 +1,28 @@
+vertical,institucion,recurso,url,formato,acceso,georreferenciado,api_publica,viabilidad_tecnica,verificado
+registral,SUNARP,Visor de Base Grafica Registral,https://www.gob.pe/63173-acceder-al-visor-de-la-base-grafica-registral,geovisor web,gratuito,si,no,alta,2026-09-16
+registral,SUNARP,Servicio de Publicidad Registral en Linea SPRL,https://sprl.sunarp.gob.pe/sprl/ingreso,web,gratuito y de pago,no,no,media,2026-09-16
+registral,SUNARP,Manual de usuario Visor BGR,https://www.sunarp.gob.pe/pdfs/visorbgr/MANUAL_DEL_USUARIO_VISOR_BGR.pdf,pdf,publico,no,no,alta,2026-09-16
+urbanistico,Municipalidad Provincial de Arequipa,Portal Muni Virtual,https://www.muniarequipa.gob.pe/muni-virtual-4/,web,publico,no,no,baja,2026-09-16
+urbanistico,Municipalidad Provincial de Arequipa,PDM 2016-2025 IMPLA,https://www.muniarequipa.gob.pe/2026/02/16/plan-de-desarrollo-metropolitano-pdm/,pdf,publico,no,no,media,2026-09-16
+urbanistico,Municipalidad JLByR,Plano de zonificacion PDM,https://www.munibustamante.gob.pe/archivos/gdu/planos/001_plano_de_zonificacion.pdf,pdf,publico,no,no,media,2026-09-16
+urbanistico,Municipalidad JLByR,Plan Urbano Distrital,https://www.munibustamante.gob.pe/archivos/gdu/planos/plan_urbano.pdf,pdf,publico,no,no,media,2026-09-16
+urbanistico,Municipalidad JLByR,TUPA,https://www.munibustamante.gob.pe/archivos/1690322339.pdf,pdf,publico,no,no,alta,2026-09-16
+urbanistico,Municipalidad JLByR,Certificados de parametros y planos de zonificacion y vias,https://www.munibustamante.gob.pe/servicios/83-certificados-de-parametros-urbanisticos-y-edificatorios-y-planos-de-zonificacion-y-vias,web,publico,no,no,media,2026-09-16
+urbanistico,Municipalidad de Miraflores Arequipa,Ficha de parametros urbanisticos y edificatorios,https://www.munimiraflores-arequipa.gob.pe/wp-content/uploads/2019/04/Certificados-1.pdf,pdf,publico,no,no,media,2026-09-16
+urbanistico,Municipalidad de Paucarpata,Mesa de partes virtual,https://mpv.munipaucarpata.gob.pe/,web,publico,no,no,baja,2026-09-16
+urbanistico,Municipalidad de Paucarpata,Tramites y servicios,https://www.gob.pe/institucion/munipaucarpata/tramites-y-servicios,web,publico,no,no,baja,2026-09-16
+peligro,CENEPRED,Mapa de peligro ciudad de Arequipa INDECI PNUD,https://sigrid.cenepred.gob.pe/sigridv3/documento/3546,documento y mapa,publico,si,no,alta,2026-09-16
+peligro,CENEPRED,Evaluacion de riesgos en torrenteras distrito de Yura,https://sigrid.cenepred.gob.pe/sigridv3/documento/6076,documento,publico,si,no,alta,2026-09-16
+peligro,CENEPRED,Mapa de peligro por inundacion Camana,https://sigrid.cenepred.gob.pe/sigridv3/documento/3555,documento y mapa,publico,si,no,alta,2026-09-16
+peligro,ANA,Puntos criticos con riesgo a inundaciones Arequipa 2019,http://sigrid.cenepred.gob.pe/sigridv3/documento/8814,documento,publico,si,no,alta,2026-09-16
+peligro,PCM,Zonas con peligro potencial de inundacion Peru,https://sigrid.cenepred.gob.pe/sigridv3/documento/843,mapa,publico,si,no,alta,2026-09-16
+peligro,GEOIDEP,Mapa de zonificacion sismica geotecnica de suelos Arequipa,https://catalogo.geoidep.gob.pe/metadatos/srv/api/records/26f6f0eb-8bc4-4427-b2a0-f5c33b479752,metadato geoespacial,publico,si,parcial,alta,2026-09-16
+servicios,SEDAPAR,Certificado de factibilidad de agua y alcantarillado,https://www.gob.pe/25043-solicitar-certificado-de-factibilidad-para-servicio-de-agua-potable-y-alcantarillado?child=65539,tramite presencial,presencial,no,no,muy baja,2026-09-16
+servicios,SEDAPAR,Formato de solicitud de factibilidad,https://www.munimiraflores-arequipa.gob.pe/wp-content/uploads/2019/04/Solicitud-Factibilidad-Servicios-SEDAPAR.pdf,pdf,publico,no,no,baja,2026-09-16
+servicios,SEDAPAR,Portal institucional,https://www.sedapar.com.pe/,web,publico,no,no,baja,2026-09-16
+delictiva,MININTER,Mapa del Delito Georreferenciado,https://observatorio.mininter.gob.pe/MapaDelDelitoGeorreferenciado,geovisor web,publico,si,no,media,2026-09-16
+delictiva,MININTER,GEOMININTER geoportal,https://geoportal.mininter.gob.pe/,geoportal,publico,si,parcial,media,2026-09-16
+delictiva,UCSP,Encuesta de victimizacion y percepcion de seguridad Arequipa,https://ucsp.edu.pe/archivos/publicaciones/cegob/Encuesta-Victimizacion-Percepcion-Seguridad-Ciudadana.pdf,pdf,publico,no,no,alta,2026-09-16
+delictiva,INEI,Estadisticas de seguridad ciudadana,https://www.inei.gob.pe/media/MenuRecursivo/boletines/estadisticas-de-seguridad-ciudadana-enero-junio-2024.pdf,pdf,publico,no,no,alta,2026-09-16
+formalizacion,COFOPRI,Campanas de formalizacion predial Arequipa,https://www.gob.pe/institucion/cofopri/noticias/774559-arequipa-cofopri-visitara-mas-de-700-lotes-urbanos-considerados-para-campana-gratuita-de-empadronamiento,web,publico,no,no,media,2026-09-16
+politica,PCM,Catalogo de aplicaciones con IA en el Estado peruano,https://www.gob.pe/institucion/pcm/informes-publicaciones/6879780-catalogo-de-aplicaciones-con-inteligencia-artificial-en-el-estado-peruano,publicacion,publico,no,no,alta,2026-09-16

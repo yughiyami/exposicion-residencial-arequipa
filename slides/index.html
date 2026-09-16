@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exposición Residencial Arequipa — Presentación</title>
+<style>
+  :root{
+    --bg:#0d1117; --bg2:#161b22; --fg:#e6edf3; --dim:#8b949e;
+    --accent:#f0883e; --accent2:#58a6ff; --ok:#3fb950; --warn:#d29922; --bad:#f85149;
+    --line:#30363d;
+    --serif: ui-serif, Georgia, "Times New Roman", serif;
+    --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--fg);font-family:var(--sans)}
+  #deck{height:100vh;width:100vw;overflow:hidden;position:relative}
+  .slide{
+    position:absolute;inset:0;display:none;
+    padding:clamp(24px,5vh,64px) clamp(20px,6vw,96px);
+    overflow-y:auto;overflow-x:hidden;
+    flex-direction:column;justify-content:center;justify-content:safe center;
+    animation:fade .28s ease;
+  }
+  .slide.active{display:flex}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .kicker{font-family:var(--mono);font-size:clamp(11px,1.1vw,13px);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.9em}
+  h1{font-family:var(--serif);font-size:clamp(30px,5.4vw,68px);line-height:1.08;margin:0 0 .35em;font-weight:600;letter-spacing:-.02em}
+  h2{font-family:var(--serif);font-size:clamp(24px,3.6vw,44px);line-height:1.15;margin:0 0 .6em;font-weight:600;letter-spacing:-.015em}
+  h3{font-size:clamp(15px,1.6vw,20px);margin:1.4em 0 .5em;color:var(--accent2);font-weight:600}
+  p{font-size:clamp(15px,1.55vw,21px);line-height:1.6;margin:0 0 .9em;max-width:60ch;color:var(--fg)}
+  p.lead{font-size:clamp(17px,2vw,26px);color:var(--dim)}
+  .sub{color:var(--dim);font-size:clamp(13px,1.3vw,17px)}
+
+  blockquote{
+    margin:.4em 0 1em;padding:clamp(16px,2.2vw,28px);
+    background:var(--bg2);border-left:4px solid var(--accent);border-radius:0 8px 8px 0;
+    font-family:var(--serif);font-size:clamp(17px,2.3vw,30px);line-height:1.4;max-width:34ch;
+  }
+  blockquote.wide{max-width:52ch}
+
+  table{border-collapse:collapse;width:100%;max-width:1100px;font-size:clamp(12px,1.25vw,17px);margin:.3em 0 1em}
+  th,td{text-align:left;padding:.55em .7em;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--accent2);font-weight:600;font-size:.86em;letter-spacing:.04em;text-transform:uppercase}
+  td strong{color:var(--fg)}
+  .num{font-family:var(--mono);white-space:nowrap}
+
+  ul{margin:.2em 0 1em;padding-left:1.1em;max-width:62ch}
+  li{font-size:clamp(14px,1.45vw,20px);line-height:1.55;margin-bottom:.5em}
+
+  .grid{display:grid;gap:clamp(12px,1.6vw,22px);grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));max-width:1150px;margin-top:.5em}
+  .card{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:clamp(14px,1.7vw,22px)}
+  .card h4{margin:0 0 .45em;font-size:clamp(14px,1.4vw,18px);color:var(--accent)}
+  .card p{font-size:clamp(12.5px,1.2vw,16px);margin:0;color:var(--dim)}
+
+  .big{font-family:var(--mono);font-size:clamp(34px,7vw,92px);line-height:1;color:var(--accent);letter-spacing:-.03em}
+  .bigrow{display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,64px);margin:.6em 0 1em}
+  .bigrow div{min-width:150px}
+  .bigrow .lbl{color:var(--dim);font-size:clamp(12px,1.2vw,16px);margin-top:.5em;max-width:22ch}
+
+  .bar{font-family:var(--mono);font-size:clamp(9px,1.15vw,15px);line-height:1.9;white-space:pre;overflow-x:auto;max-width:100%;min-width:0;align-self:stretch;color:var(--fg);padding-bottom:.4em}
+  .bar .g{color:var(--ok)} .bar .y{color:var(--warn)} .bar .r{color:var(--bad)}
+
+  .tag{display:inline-block;font-family:var(--mono);font-size:.78em;padding:.2em .6em;border-radius:5px;border:1px solid var(--line);color:var(--dim);margin-right:.4em}
+  .tag.ok{color:var(--ok);border-color:var(--ok)}
+  .tag.bad{color:var(--bad);border-color:var(--bad)}
+  .tag.warn{color:var(--warn);border-color:var(--warn)}
+
+  .verdict{font-family:var(--mono);font-size:clamp(28px,6vw,72px);color:var(--warn);border:3px solid var(--warn);display:inline-block;padding:.18em .5em;border-radius:12px;letter-spacing:.04em}
+
+  #bar{position:fixed;left:0;bottom:0;height:3px;background:var(--accent);width:0;transition:width .28s ease;z-index:10}
+  #hud{position:fixed;right:clamp(12px,2vw,26px);bottom:clamp(10px,1.6vw,20px);font-family:var(--mono);font-size:12px;color:var(--dim);z-index:10;user-select:none}
+  #hint{position:fixed;left:clamp(12px,2vw,26px);bottom:clamp(10px,1.6vw,20px);font-family:var(--mono);font-size:11px;color:var(--line);z-index:10}
+  @media (max-width:760px){
+    table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .bar{overflow-x:auto}
+  }
+  @media (max-width:640px){ #hint{display:none} }
+</style>
+</head>
+<body>
+<div id="deck">
+
+<section class="slide active">
+  <div class="kicker">Gestión Estratégica de TI · Arequipa, Perú</div>
+  <h1>Exposición residencial:<br>el dato existe,<br>la decisión no.</h1>
+  <p class="lead">Por qué un comprador de vivienda en Arequipa no puede verificar lo que compra — y qué producto resuelve eso.</p>
+  <p class="sub">Fuentes verificadas al 16 de septiembre de 2026</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">01 · Punto de partida</div>
+  <h2>El planteamiento original</h2>
+  <blockquote class="wide">Las personas que buscan comprar vivienda en Arequipa tienen dificultades para evaluar objetivamente la exposición delictiva de una ubicación, porque la información existe pero no está orientada a la decisión residencial.</blockquote>
+  <p>Correcto en su mecánica. Demasiado estrecho en su alcance.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">02 · Reencuadre</div>
+  <h2>El delito no es lo que más cuesta</h2>
+  <table>
+    <tr><th>Dimensión</th><th>Exposición delictiva</th><th>Condición legal-urbanística</th></tr>
+    <tr><td>Magnitud de la pérdida</td><td>~1 % del valor</td><td><strong>Capital total</strong></td></tr>
+    <tr><td>Reversibilidad</td><td>Alta — mudarse</td><td><strong>Nula</strong></td></tr>
+    <tr><td>Ventana de decisión</td><td>Permanente</td><td><strong>Solo antes de firmar</strong></td></tr>
+    <tr><td>Gasto observable hoy</td><td>No documentado</td><td>Registral, legal, tasación</td></tr>
+  </table>
+  <p class="sub">El delito arruina el año. La habilitación urbana arruina la vida.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">03 · Causa raíz</div>
+  <blockquote>El Estado organiza la información por institución.<br><br>El ciudadano la necesita organizada por predio.</blockquote>
+  <p>Cinco entidades soberanas custodian cinco capas. Ninguna tiene el mandato de responder la única pregunta que decide la compra.</p>
+  <p class="sub">El problema no es de disponibilidad de datos. Es de integración orientada a la decisión.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">04 · Magnitud · Perú</div>
+  <h2>No es un nicho</h2>
+  <div class="bigrow">
+    <div><div class="big">61,7 %</div><div class="lbl">de las viviendas urbanas del Perú son informales — 4,1 M de hogares</div></div>
+    <div><div class="big">93 %</div><div class="lbl">de la expansión urbana ocurre fuera del marco formal</div></div>
+    <div><div class="big">13,8 %</div><div class="lbl">de viviendas informales contó con ingeniero o arquitecto</div></div>
+  </div>
+  <p class="sub">Dos tercios de la producción anual de vivienda es autoconstrucción informal.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">05 · Magnitud · Arequipa</div>
+  <h2>El peor caso del país</h2>
+  <div class="bigrow">
+    <div><div class="big">1000+</div><div class="lbl">denuncias por estafa en compraventa de terrenos al cierre de 2024</div></div>
+    <div><div class="big">33,5 %</div><div class="lbl">victimización urbana — la mayor tasa del Perú</div></div>
+    <div><div class="big">4,5×</div><div class="lbl">aumento de la extorsión: de 6,8 a 30,6 por 100 mil hab. (2019–2025)</div></div>
+  </div>
+  <p class="sub">Distritos con más hechos reportados: Cerro Colorado 16,60 % · Paucarpata 14,98 % · JLByR 10,12 %</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">06 · Estructura</div>
+  <h2>Cinco verticales, una sola pregunta</h2>
+  <table>
+    <tr><th>#</th><th>Vertical</th><th>Pregunta</th><th>Institución</th><th>Formato</th></tr>
+    <tr><td class="num">1</td><td>Registral</td><td>¿Es transferible?</td><td>SUNARP</td><td><span class="tag ok">geovisor</span></td></tr>
+    <tr><td class="num">2</td><td><strong>Urbanístico</strong></td><td>¿Se puede construir?</td><td>Municipalidad</td><td><span class="tag bad">PDF</span></td></tr>
+    <tr><td class="num">3</td><td>Peligro físico</td><td>¿Es seguro?</td><td>CENEPRED / ANA</td><td><span class="tag ok">geoespacial</span></td></tr>
+    <tr><td class="num">4</td><td><strong>Servicios</strong></td><td>¿Tendrá agua?</td><td>SEDAPAR</td><td><span class="tag bad">presencial</span></td></tr>
+    <tr><td class="num">5</td><td>Delictiva</td><td>¿Es tolerable?</td><td>MININTER / INEI</td><td><span class="tag warn">geovisor</span></td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <div class="kicker">07 · Diagnóstico</div>
+  <h2>Estado real de integración</h2>
+<div class="bar"><span class="g">1 — Registral    ████████░░</span>  Digital, georreferenciado, sin API
+<span class="r">2 — Urbanístico  ██░░░░░░░░</span>  PDF por municipalidad
+<span class="g">3 — Peligro      ███████░░░</span>  Plataforma pública, cobertura desigual
+<span class="r">4 — Servicios    █░░░░░░░░░</span>  Presencial, exige profesional colegiado
+<span class="y">5 — Delictiva    ███████░░░</span>  Geovisor público, con subregistro</div>
+  <blockquote class="wide">Ninguno de los cinco está vinculado a otro por un identificador común. Esa es la causa raíz expresada en términos técnicos.</blockquote>
+</section>
+
+<section class="slide">
+  <div class="kicker">08 · Hallazgo verificado</div>
+  <h2>Para saber si un terreno tendrá agua…</h2>
+  <blockquote class="wide">…el ciudadano debe contratar a un ingeniero o arquitecto colegiado <strong>antes de comprarlo</strong>.</blockquote>
+  <p>SEDAPAR exige memoria descriptiva firmada por profesional colegiado y ficha registral de antigüedad menor a 60 días. Trámite 100 % presencial.</p>
+  <p class="sub">Contrastar: solo el 13,8 % de las viviendas informales contó con esa asistencia. El requisito es, para el segmento objetivo, inalcanzable.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">09 · Benchmark mundial</div>
+  <h2>No hay un sistema. Hay tres.</h2>
+  <div class="grid">
+    <div class="card"><h4>1 · Obligación legal</h4><p>El Estado obliga a que la información viaje con el inmueble.<br><br><strong>Reino Unido · Victoria · California</strong></p></div>
+    <div class="card"><h4>2 · Seguro</h4><p>Una industria privada asume el riesgo a cambio de una prima.<br><br><strong>Estados Unidos</strong></p></div>
+    <div class="card"><h4>3 · Bien público digital</h4><p>El Estado publica el dato como servicio gratuito.<br><br><strong>Países Bajos · España · Estonia</strong></p></div>
+  </div>
+  <p class="sub" style="margin-top:1.2em">El Perú no tiene ninguno de los tres completo.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">10 · Modelo 1</div>
+  <h2>Cuando el Estado obliga</h2>
+  <table>
+    <tr><th>País</th><th>Instrumento</th><th>Regla decisiva</th></tr>
+    <tr><td>Reino Unido</td><td>LLC1 + CON29</td><td>Las cargas inscritas obligan <strong>aunque no se haya hecho la búsqueda</strong></td></tr>
+    <tr><td>Reino Unido</td><td>Material Information</td><td>El agente debe <strong>tomar pasos razonables para establecer</strong>, no repetir al vendedor</td></tr>
+    <tr><td>Victoria (AU)</td><td>Section 32</td><td><strong>No se puede pactar en contra</strong>; si es inexacta, el comprador rescinde</td></tr>
+    <tr><td>California</td><td>NHD Statement</td><td>Seis zonas de peligro; incumplimiento = <strong>responsabilidad por daños</strong></td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <div class="kicker">11 · Modelo 2 · El precedente</div>
+  <h2>Cuando el Estado no se ordena</h2>
+  <div class="bigrow">
+    <div><div class="big">3 144</div><div class="lbl">jurisdicciones de EE. UU. con taxonomía de registro distinta</div></div>
+    <div><div class="big">16 200</div><div class="lbl">millones de dólares en primas de seguro de título en 2024</div></div>
+  </div>
+  <blockquote class="wide">Las compañías de título construyeron sus propios <strong>title plants</strong>: espejos privados de los registros públicos, reindexados de forma consistente.</blockquote>
+  <p class="sub">Cuando el Estado no unifica, el mercado construye el espejo y cobra por consultarlo. No es hipótesis: es historia económica.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">12 · La advertencia</div>
+  <h2>El caso Zillow</h2>
+  <p>Zillow retiró los puntajes de riesgo climático de <strong>más de un millón de avisos</strong> en noviembre–diciembre de 2025, tras presión del gremio inmobiliario.</p>
+  <blockquote class="wide">Los inmuebles marcados como de alto riesgo se vendieron <strong>~1 % por debajo</strong> de su valor de mercado.</blockquote>
+  <h3>Cuatro lecciones de diseño</h3>
+  <ul>
+    <li>El índice <strong>funciona</strong> — movió precios de forma medible.</li>
+    <li>Precisamente por funcionar, genera resistencia gremial.</li>
+    <li>Nunca vender al actor cuyo incentivo se invierte.</li>
+    <li>Metodología pública: el ataque efectivo fue por <strong>exactitud</strong>, no por la idea.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <div class="kicker">13 · Modelo 3</div>
+  <h2>Cuando el Estado sí resuelve</h2>
+  <div class="grid">
+    <div class="card"><h4>Países Bajos</h4><p>Kadaster / PDOK / BAG. API REST, OGC, Linked Data y SPARQL. Más de 235 datasets. <strong>Capa base gratis, valor agregado pago.</strong></p></div>
+    <div class="card"><h4>España</h4><p>Catastro de consulta libre. <strong>Geometría pública; identidad del titular y valor, protegidos.</strong> Criterio adoptable tal cual.</p></div>
+    <div class="card"><h4>Estonia</h4><p>Uso permitido del suelo en el <strong>mismo registro</strong> que la titularidad. Identificador único compartido entre todos los registros.</p></div>
+  </div>
+  <p class="sub" style="margin-top:1.2em">Donde el Estado se ordena, el negocio privado desaparece — y eso es socialmente preferible.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">14 · Posición del Perú</div>
+  <h2>Resolvió lo nacional. No resolverá lo municipal.</h2>
+  <table>
+    <tr><th>Capa</th><th>Perú</th><th>Modelo</th></tr>
+    <tr><td>Registral</td><td>Visor BGR SUNARP — gratuito, georreferenciado, 6 M de predios</td><td><span class="tag ok">3 casi completo</span></td></tr>
+    <tr><td>Peligro físico</td><td>SIGRID — CENEPRED</td><td><span class="tag ok">3 parcial</span></td></tr>
+    <tr><td>Delictiva</td><td>Mapa del Delito MININTER</td><td><span class="tag warn">3 parcial</span></td></tr>
+    <tr><td><strong>Urbanística</strong></td><td><strong>PDF · más de 1 800 municipalidades</strong></td><td><span class="tag bad">ninguno</span></td></tr>
+    <tr><td><strong>Servicios</strong></td><td><strong>Presencial</strong></td><td><span class="tag bad">ninguno</span></td></tr>
+    <tr><td>Divulgación del vendedor</td><td>No existe</td><td><span class="tag bad">ninguno</span></td></tr>
+  </table>
+  <p class="sub">3 144 condados de EE. UU. no se estandarizaron en 150 años. El vacío municipal es estructural, no coyuntural.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">15 · La cifra que decide</div>
+  <h2>Tres órdenes de magnitud</h2>
+<div class="bar">Seguro de título — capa registral   <span class="g">████████████████████████████████</span>  USD 16 200 M / año
+Jupiter Intelligence — peligro     <span class="y">▌</span>                                 USD 88 M levantados
+SpotCrime — capa delictiva         <span class="r">▏</span>                                 USD 7 M / año</div>
+  <p>SpotCrime opera la mayor base de criminalidad de EE. UU. — 500 M de registros, 22 000 ciudades — y factura USD 7 millones al año.</p>
+  <blockquote class="wide">La capa delictiva construye tráfico. La capa registral-urbanística construye ingresos.</blockquote>
+</section>
+
+<section class="slide">
+  <div class="kicker">16 · Competencia</div>
+  <h2>El espacio está vacío en toda la región</h2>
+  <table>
+    <tr><th>Empresa</th><th>País</th><th>Foco</th><th>¿Verifica riesgo de ubicación?</th></tr>
+    <tr><td>Houm</td><td>Chile</td><td>Arriendo digital</td><td><span class="tag bad">No</span></td></tr>
+    <tr><td>Homie</td><td>México</td><td>Renta sin aval</td><td><span class="tag bad">No</span></td></tr>
+    <tr><td>La Haus</td><td>Colombia</td><td>Venta de vivienda nueva</td><td><span class="tag bad">No</span></td></tr>
+    <tr><td>Gojom · Valia</td><td>Perú</td><td>Transacción</td><td><span class="tag bad">No</span></td></tr>
+    <tr><td>Urbania · Adondevivir</td><td>Perú</td><td>Portales de avisos</td><td><span class="tag bad">No</span></td></tr>
+  </table>
+  <p class="sub">El foco regional es la transacción, no la verificación previa. Mercado inmobiliario latinoamericano 2026: más de USD 1,1 billones.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">17 · Producto</div>
+  <h2>Un <em>title plant</em> para Arequipa</h2>
+  <p class="lead">Capa de agregación y estandarización de información predial.</p>
+  <p><strong>Entrada:</strong> una ubicación. <strong>Salida:</strong> semáforo por capa más informe descargable con <strong>fuente e institución citada y fechada en cada línea</strong>.</p>
+  <h3>Ventaja injusta</h3>
+  <p>La zonificación de Arequipa no está expuesta como servicio geoespacial. Hay que ingestarla, georreferenciarla, vectorizarla y mantenerla. Es una barrera <strong>local</strong>: no se replica desde Lima sin pisar Arequipa.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">18 · Límites de diseño</div>
+  <h2>Lo que el producto NO es</h2>
+  <table>
+    <tr><th>No es</th><th>Por qué</th></tr>
+    <tr><td>Un certificado</td><td><strong>Informa, no certifica.</strong> No sustituye publicidad registral ni factibilidad del prestador</td></tr>
+    <tr><td>Un juicio de titularidad</td><td>Reporta lo que el registro consigna, con su fecha</td></tr>
+    <tr><td>Calificación de predio individual</td><td>Trabaja por zona agregada — lección Zillow</td></tr>
+    <tr><td>Un directorio de propietarios</td><td>Criterio español: geometría pública, identidad protegida</td></tr>
+    <tr><td>Una tasación</td><td>No estima valor comercial</td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <div class="kicker">19 · Validación</div>
+  <h2>Umbrales fijados antes de medir</h2>
+  <table>
+    <tr><th>Experimento</th><th>Aprueba</th><th>Refuta</th><th>Costo</th></tr>
+    <tr><td>Prueba de humo<br><span class="sub">landing con CTA real</span></td><td class="num" style="color:var(--ok)">≥ 4 % de 300</td><td class="num" style="color:var(--bad)">&lt; 2 % de 300</td><td>&lt; USD 50</td></tr>
+    <tr><td>MVP conserje<br><span class="sub">reporte entregado a mano</span></td><td class="num" style="color:var(--ok)">≥ 4 de 10 repiten</td><td class="num" style="color:var(--bad)">≤ 2 de 10</td><td>Solo tiempo</td></tr>
+    <tr><td>15 entrevistas<br><span class="sub">solo conducta pasada</span></td><td colspan="2">¿Qué verificó? ¿Cuánto gastó? ¿Qué no pudo averiguar?</td><td>Solo tiempo</td></tr>
+  </table>
+  <p class="sub">Prohibido preguntar «¿usaría usted una plataforma que…?». Es intención hipotética, no evidencia.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">20 · Honestidad metodológica</div>
+  <h2>Veredicto actual</h2>
+  <div class="verdict">PENDIENTE</div>
+  <p style="margin-top:1.2em">El <strong>problema</strong> está documentado: daño cuantificado, universo dimensionado, fragmentación verificada en los portales oficiales.</p>
+  <p>La <strong>demanda pagada</strong> no está medida. El único indicio conductual —3 millones de consultas al Visor BGR de SUNARP— prueba interés en verificar sobre un servicio <strong>gratuito</strong>.</p>
+  <blockquote class="wide">La investigación documental no sustituye al experimento.</blockquote>
+</section>
+
+<section class="slide">
+  <div class="kicker">21 · Curso</div>
+  <h2>Mapeo a Gestión Estratégica de TI</h2>
+  <table>
+    <tr><th>Componente</th><th>Contenido</th></tr>
+    <tr><td><strong>PETI</strong></td><td>No crear información nueva: <strong>integrar la existente</strong>. Diagnóstico con el Índice de Calidad de la Administración de Tierras del Banco Mundial</td></tr>
+    <tr><td><strong>BPMN As-Is</strong></td><td>5 consultas desacopladas, 2 presenciales, 1 con requisito profesional previo, sin veredicto consolidado</td></tr>
+    <tr><td><strong>BPMN To-Be</strong></td><td>Consulta única orquestada con fuente, fecha y nivel de confianza por línea</td></tr>
+    <tr><td><strong>CMI</strong></td><td>Tiempo: semanas → minutos. Entidades a consultar: 5 → 1. Trámites presenciales: 2 → 0</td></tr>
+    <tr><td><strong>OWASP</strong></td><td>Una fuga produce un <strong>catálogo de objetivos para el crimen organizado</strong>. Minimización, auditoría, limitación de tasa</td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <div class="kicker">22 · Siguiente paso</div>
+  <h2>Una verificación bloquea el cronograma</h2>
+  <blockquote class="wide">Abrir el plano de zonificación de José Luis Bustamante y Rivero en QGIS y determinar si es <strong>vectorial o raster escaneado</strong>.</blockquote>
+  <p>Si es vectorial, el piloto cubre el distrito completo. Si es raster, el alcance se reduce a un sector — y se declara desde el inicio, no en la semana 12.</p>
+  <p class="sub" style="margin-top:2em">Repositorio, documentación por país y dossier de evidencia completo en <strong>MEGA-DOCUMENTO.md</strong></p>
+</section>
+
+</div>
+
+<div id="bar"></div>
+<div id="hud">1 / 1</div>
+<div id="hint">← → · espacio · inicio/fin</div>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var i = 0;
+  var hud = document.getElementById('hud');
+  var bar = document.getElementById('bar');
+
+  function show(n){
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function(s, k){ s.classList.toggle('active', k === i); });
+    hud.textContent = (i + 1) + ' / ' + slides.length;
+    bar.style.width = (((i + 1) / slides.length) * 100) + '%';
+    slides[i].scrollTop = 0;
+    try { location.hash = String(i + 1); } catch (e) {}
+  }
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1); }
+    else if (e.key === 'Home') { e.preventDefault(); show(0); }
+    else if (e.key === 'End') { e.preventDefault(); show(slides.length - 1); }
+  });
+
+  document.addEventListener('click', function(e){
+    if (e.target.closest('a')) return;
+    show(e.clientX > window.innerWidth * 0.4 ? i + 1 : i - 1);
+  });
+
+  var x0 = null;
+  document.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+  document.addEventListener('touchend', function(e){
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(dx < 0 ? i + 1 : i - 1);
+    x0 = null;
+  }, {passive:true});
+
+  var start = parseInt((location.hash || '').replace('#',''), 10);
+  show(isNaN(start) ? 0 : start - 1);
+})();
+</script>
+</body>
+</html>
