@@ -65,7 +65,7 @@ Esta sección es tan importante como la anterior, y responde directamente a la l
 | **Canales** | Grupos de compraventa en redes sociales — el mismo canal donde hoy se publican las ofertas fraudulentas; alianza con el Colegio de Arquitectos filial Arequipa; referidos de afectados |
 | **Modelo de ingresos** | Consulta básica gratuita como captación; reporte consolidado de pago; suscripción por volumen en el segmento institucional. Estructura tomada del modelo híbrido del Kadaster neerlandés |
 | **Estructura de costos** | Concentrada en la **digitalización y mantenimiento de la capa de zonificación**. La infraestructura de cómputo es marginal |
-| **Ventaja injusta** | Esa misma capa. La zonificación de Arequipa no está expuesta como servicio geoespacial: exige ingesta, georreferenciación, vectorización y mantenimiento normativo. Es una barrera **local**, no replicable desde otra ciudad |
+| **Ventaja injusta** | **Revisada tras el hallazgo de [UbicaBien](../04-startups/ubicabien.md).** La zonificación digitalizada ya no puede declararse como foso exclusivo: el competidor la ofrece. La barrera defendible es la **capa registral (SUNARP) más el conocimiento del mecanismo de fraude local** —predio rústico vendido como urbano, predio del Estado— que ningún competidor cubre en su oferta pública |
 
 ---
 
@@ -137,6 +137,8 @@ SUNARP     Capa propia  SIGRID      Proxy      MININTER
 | R5 | Fuga de datos convertiría el sistema en catálogo de objetivos para el crimen organizado | **Crítica** | Control de acceso, minimización de dato personal, registro de auditoría — ver mapeo OWASP |
 | R6 | Resistencia gremial del sector inmobiliario | Media | Metodología pública y auditable; el ataque a First Street fue por exactitud, no por la idea |
 | R7 | El Estado cierra el vacío | Baja en el corto plazo | Declarado como horizonte de obsolescencia. La evidencia comparada —3 144 jurisdicciones sin estandarizar en 150 años— sugiere que el vacío municipal es estructural |
+| R8 | **[UbicaBien](../04-startups/ubicabien.md) opera en Arequipa desde 2026 con respaldo de ProInnóvate y cubre valorización, zonificación, conectividad y desastres** | **Crítica** | Estrechar el posicionamiento a **registral + habilitación urbana**, segmento de comprador único del borde informal y cobro por evento. Excluir valorización del alcance. Ejecutar V1–V4 antes de sostener la diferenciación |
+| R9 | **Si UbicaBien ya digitalizó la zonificación de Arequipa, la ventaja injusta declarada está tomada** | **Crítica** | Verificación V2. Si se confirma, la barrera pasa a ser la capa registral y el conocimiento del mecanismo de fraude local |
 
 ---
 

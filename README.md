@@ -61,7 +61,9 @@ Detalle en [`docs/02-paises/`](docs/02-paises/).
 - [x] Diagnóstico de fuentes de datos en Arequipa
 - [x] Panorama competitivo
 - [x] Definición de producto y plan de validación
+- [x] Análisis del competidor directo — [UbicaBien](docs/04-startups/ubicabien.md), Arequipa
 - [ ] Verificación de campo: naturaleza vectorial o raster del plano de zonificación de JLByR
+- [ ] Verificación V1–V4: cobertura real de UbicaBien con su plan gratuito
 - [ ] Entrevistas de desarrollo de clientes (n=15)
 - [ ] Prueba de humo con umbral precomprometido
 

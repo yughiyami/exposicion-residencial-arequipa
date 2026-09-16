@@ -510,6 +510,7 @@ SpotCrime (delictiva)            ▏                                  USD 7 M / 
 
 | Empresa | País | Foco | ¿Verifica riesgo de ubicación? |
 |---|---|---|---|
+| **UbicaBien** | **Perú — Arequipa** | **Geoverificación: valorización, zonificación, conectividad, desastres** | **Sí — competidor directo** |
 | Houm | Chile | Arriendo digital | No |
 | Homie | México | Renta sin aval | No |
 | La Haus | Colombia | Venta de vivienda nueva | No |
@@ -525,13 +526,60 @@ SpotCrime (delictiva)            ▏                                  USD 7 M / 
 
 Según el **BID**, las proptech regionales atacan **falta de transparencia** e **ineficiencia de procesos**. Este proyecto se ubica en el primero.
 
-## 8.4 Conclusión competitiva
+## 8.4 UbicaBien — competidor directo en Arequipa
 
-> **Ningún actor latinoamericano identificado ofrece verificación integral de la condición legal-urbanística, de servicios y de peligro de una ubicación residencial.**
+> **Corrección.** Una versión previa de este documento afirmaba que ningún actor latinoamericano ofrecía verificación integral de una ubicación residencial. **Era falso.** Ficha completa en [`docs/04-startups/ubicabien.md`](docs/04-startups/ubicabien.md).
 
-**Lectura optimista:** el espacio está vacío en toda la región; la barrera de entrada es local y defendible.
+| Campo | Dato |
+|---|---|
+| Posicionamiento | «El primer verificador inmobiliario del Perú» · lema **Decide Bien** |
+| Origen | **Nace en Arequipa** |
+| Lanzamiento | Agosto de 2026 |
+| Respaldo | **StartUp Perú · ProInnóvate · Innicia (UCSM)** |
+| Equipo | CEO con perfil en gestión de riesgos de desastres y planificación territorial; CTO full stack y cloud; CDO en diseño de servicios |
+| Capas | Valorización · Zonificación · Conectividad · Desastres |
+| Producto adicional | ACM para corredores, con firma y logo de agencia en el reporte |
+| Precios | Gratuito (3 verificaciones) · S/ 10/mes · S/ 49/mes · S/ 150/3 meses |
+| Postura legal | «Información referencial, no constituye asesoría profesional» |
 
-**Lectura de advertencia:** que nadie lo haya construido en un mercado de USD 1,1 billones puede indicar disposición a pagar menor que la magnitud del daño. Es la razón por la cual el veredicto permanece en `PENDIENTE`.
+### Comparación de cobertura
+
+| Capa | UbicaBien | Propuesta |
+|---|---|---|
+| Valorización / precio | **Sí — capa central** | **No** — fuera de alcance |
+| Zonificación | Sí | Sí |
+| Conectividad a amenidades | Sí | Parcial, propósito distinto |
+| Riesgo de desastres | Sí | Sí |
+| **Registral (SUNARP)** | **No visible en el sitio público** | **Sí — capa central** |
+| **Habilitación urbana** | No declarado | **Sí — capa central** |
+| **Factibilidad de agua y desagüe** | No | Sí, como proxy declarado |
+| **Exposición delictiva** | No | Sí |
+| ACM para corredores | Sí | No |
+
+## 8.5 Conclusión competitiva revisada
+
+**Validación del problema.** Un equipo con financiamiento público apostó a este problema en esta misma ciudad. Es evidencia externa más fuerte que cualquier argumento propio, y levanta la advertencia previa de «si nadie lo construyó, quizá no hay demanda».
+
+**Amenaza competitiva.** Están lanzados, con planes de pago activos y respaldo institucional local. **Si ya digitalizaron la zonificación de Arequipa, la ventaja competitiva propuesta está tomada.**
+
+### Diferenciación defendible
+
+| Eje | UbicaBien | Propuesta |
+|---|---|---|
+| Pregunta central | **«¿Es buena inversión?»** | **«¿Me van a estafar?»** |
+| Usuario | Inversionista, corredor, agencia | Comprador de **primera vivienda** en el borde de expansión |
+| Frecuencia | Recurrente | **Una vez en la vida** |
+| Cobro | Suscripción mensual | **Pago por evento** |
+| Mercado | Formal y consolidado | **Informal y periurbano — 61,7 % del parque urbano** |
+| Capa de diferenciación | — | **Registral y habilitación urbana** |
+
+Fundamento económico: el comparable internacional de la capa registral mueve **USD 16 200 millones anuales**, y los cuatro mecanismos de fraude documentados en Arequipa se detectan con partida registral y habilitación urbana, **no con valorización**.
+
+> Una valorización precisa de un terreno que el vendedor no puede transferir es información exacta e inútil.
+
+### Posicionamiento revisado
+
+> **Verificación registral y de habilitación urbana orientada a la prevención de fraude, para el comprador de primera vivienda en el borde de expansión informal de Arequipa — con cobro por evento, no por suscripción.**
 
 ---
 
@@ -576,7 +624,7 @@ Una **capa de agregación y estandarización de información predial** que entre
 | Canales | Grupos de compraventa en redes sociales; Colegio de Arquitectos filial Arequipa; referidos |
 | Ingresos | Consulta básica gratuita; reporte de pago; suscripción institucional — modelo híbrido Kadaster |
 | Costos | **Digitalización y mantenimiento de la capa de zonificación** |
-| Ventaja injusta | Esa capa: barrera **local**, no replicable a distancia |
+| Ventaja injusta | **Revisada.** La zonificación digitalizada ya no es foso exclusivo: UbicaBien la ofrece. La barrera defendible es la **capa registral más el conocimiento del mecanismo de fraude local** |
 
 ## 9.5 Arquitectura funcional
 
@@ -780,6 +828,8 @@ Esta sección existe porque un trabajo que no declara sus límites no es investi
 | L8 | La capa delictiva tiene cifra negra y problema de resolución espacial | Requiere calibración con victimización y validación de geocodificación |
 | L9 | El modelo hedónico presenta endogeneidad | ¿El delito reduce el precio o los barrios baratos atraen delito? Debe tratarse |
 | L10 | Datos de mercado inmobiliario de Arequipa 2025–2026 no obtenidos con detalle | El TAM local no está dimensionado |
+| L11 | **La cobertura real de UbicaBien no fue verificada dentro del producto autenticado** | Toda afirmación sobre lo que **no** cubre es inferencia a partir de su sitio público. Debe ejecutarse V1–V4 de `docs/04-startups/ubicabien.md` |
+| L12 | **No se determinó si UbicaBien ya digitalizó la zonificación de Arequipa** | Si lo hizo, la ventaja competitiva declarada en la sección 9 está tomada o compartida |
 
 ---
 

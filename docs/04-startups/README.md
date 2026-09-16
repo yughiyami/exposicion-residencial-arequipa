@@ -68,6 +68,7 @@ No produce dato primario. Ingesta, normaliza, estandariza y entrega.
 
 | Empresa | País | Foco | ¿Verifica riesgo de ubicación? |
 |---|---|---|---|
+| **[UbicaBien](ubicabien.md)** | **Perú — Arequipa** | **Geoverificación: valorización, zonificación, conectividad y desastres** | **Sí — competidor directo** |
 | Houm | Chile | Arriendo residencial digital | No |
 | Homie | México | Renta sin aval, garantías | No |
 | La Haus | Colombia | Venta de vivienda nueva | No |
@@ -90,26 +91,34 @@ Según el **BID**, las proptech de la región atacan dos problemas: **falta de t
 
 ## 5. Conclusión competitiva
 
-> **Ningún actor latinoamericano identificado ofrece verificación integral de la condición legal-urbanística, de servicios y de peligro de una ubicación residencial.**
+> **CORREGIDO.** La versión inicial de este documento afirmaba que ningún actor latinoamericano ofrecía verificación integral de una ubicación residencial. **Esa afirmación era falsa.** [UbicaBien](ubicabien.md) opera en Arequipa desde 2026 con respaldo de ProInnóvate, StartUp Perú e Innicia (UCSM), y cubre cuatro capas: valorización, zonificación, conectividad y desastres.
 
-El foco regional está en la **transacción** —firmar más rápido, alquilar sin aval, pagar más fácil— y no en la **verificación previa a la decisión**.
+El grueso del ecosistema regional sigue enfocado en la **transacción** —firmar más rápido, alquilar sin aval, pagar más fácil— y no en la **verificación previa a la decisión**. Pero en Arequipa el espacio **no está vacío**.
 
-Esto arroja dos lecturas simultáneas, y ambas deben declararse con la misma honestidad:
+### Dos lecturas, ambas válidas
 
-**Lectura optimista.** El espacio está vacío en toda la región. La barrera de entrada —normalización del dato municipal— es local y defendible. No existe competidor directo.
+**Validación del problema.** Un equipo con financiamiento público apostó a este problema en esta misma ciudad. Eso es evidencia externa de que el problema es real y financiable — más fuerte que cualquier argumento propio. Levanta específicamente la advertencia previa de «si nadie lo construyó quizá no hay demanda».
 
-**Lectura de advertencia.** Que nadie lo haya construido en un mercado de USD 1,1 billones puede indicar que la disposición a pagar es menor que la magnitud del daño. Es exactamente la razón por la cual el dossier de evidencia mantiene el veredicto `PENDIENTE` hasta ejecutar el experimento con umbral precomprometido.
+**Amenaza competitiva.** Están lanzados, con planes de pago activos, un equipo cuya CEO viene de gestión de riesgos de desastres y planificación territorial, y respaldo institucional local. **Si ya digitalizaron la zonificación de Arequipa, la ventaja competitiva propuesta está tomada.**
 
 ---
 
-## 6. Posicionamiento propuesto
+## 6. Posicionamiento propuesto — revisado
 
-> **Un *title plant* aplicado a la capa de zonificación y habilitación urbana de Arequipa.**
+El posicionamiento genérico de «cinco capas» ya no es diferenciable. La posición defendible es más angosta:
+
+> **Verificación registral y de habilitación urbana orientada a la prevención de fraude, para el comprador de primera vivienda en el borde de expansión informal de Arequipa — con cobro por evento, no por suscripción.**
 
 | Dimensión | Definición |
 |---|---|
 | Arquetipo | Agregador puro (A) |
-| Vertical de ingresos | Registral y urbanístico |
+| **Vertical de diferenciación** | **Registral (SUNARP) + habilitación urbana** — no visible en la oferta pública de UbicaBien |
 | Vertical de captación | Exposición delictiva |
-| Canal | Directo al comprador; institucional en segunda fase |
-| Barrera de entrada | Capa de zonificación digitalizada y mantenida — local, costosa, no replicable a distancia |
+| Fuera de alcance deliberado | **Valorización** — es la capa central del competidor |
+| Segmento | Comprador único del borde informal, no corredor ni inversionista recurrente |
+| Cobro | Por evento, no suscripción mensual |
+| Pregunta que responde | **«¿Me van a estafar?»**, no «¿es buena inversión?» |
+
+Fundamento económico: el comparable internacional de la capa registral mueve **USD 16 200 millones anuales**; los cuatro mecanismos de fraude documentados en Arequipa se detectan con partida registral y habilitación urbana, no con valorización.
+
+> **Verificación pendiente y bloqueante:** registrarse en el plan gratuito de UbicaBien y confirmar si incluyen capa registral. Hasta entonces, esta diferenciación es una inferencia a partir de su sitio público. Ver [`ubicabien.md`](ubicabien.md), sección 9.

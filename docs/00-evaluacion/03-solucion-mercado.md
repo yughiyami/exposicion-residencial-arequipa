@@ -28,7 +28,7 @@ Central de riesgo del predio. El usuario indica una ubicación y recibe un vered
 | **Canales** | Grupos de compraventa en Facebook Marketplace (el mismo canal donde hoy se publican las ofertas fraudulentas); alianza con notarías y con el Colegio de Arquitectos filial Arequipa; referidos de afectados. |
 | **Modelo de ingresos** | Pago por reporte (B2C) y suscripción por volumen (B2B). |
 | **Estructura de costos** | **Digitalización y normalización del dato municipal** — concentra el costo real. La infraestructura de cómputo es marginal. |
-| **Ventaja injusta** | Precisamente ese costo. La zonificación de Arequipa no está expuesta como servicio geoespacial: requiere ingesta, georreferenciación, vectorización y mantenimiento. Es una barrera **local**: no se replica desde Lima sin presencia en campo. |
+| **Ventaja injusta** | ~~La capa de zonificación digitalizada.~~ **DISPUTADA** — ver nota de actualización al pie. La barrera defendible pasa a ser la **capa registral más el conocimiento del mecanismo de fraude local**, no la zonificación. |
 
 **Ajuste con la evidencia: `PARCIALMENTE SOPORTADO`**
 
@@ -114,3 +114,39 @@ Ninguno de los tres exige crear una necesidad latente. Es un perfil de riesgo co
 | R4 | Riesgo legal y reputacional por calificar un predio individual | El producto **informa, no certifica**. Cita fuente y fecha por dato; no emite juicio de titularidad; trabaja por zona agregada. Criterio de privacidad adoptado del Catastro español: geometría y atributos públicos, identidad del titular protegida. |
 | R5 | Fuga de datos convertiría el sistema en catálogo de objetivos para el crimen organizado | Control de acceso, minimización de dato personal, registro de auditoría. Desarrollado en el mapeo OWASP. |
 | R6 | El Estado podría cerrar el vacío avanzando al Modelo 1 o completando el Modelo 3 | Declarado explícitamente como horizonte de obsolescencia. La evidencia comparada (3 144 jurisdicciones en EE. UU. sin estandarizar en 150 años) sugiere que el vacío municipal es estructural. |
+
+---
+
+## Nota de actualización — 16 de septiembre de 2026
+
+### Hallazgo posterior al análisis
+
+**[UbicaBien](../04-startups/ubicabien.md)** opera en Arequipa desde 2026 con respaldo de ProInnóvate, StartUp Perú e Innicia (UCSM), cubriendo cuatro capas: **valorización, zonificación, conectividad y desastres**.
+
+### Qué cambia en este documento
+
+| Elemento | Estado |
+|---|---|
+| Concepto A — recomendación general | **Se mantiene**, con posicionamiento estrechado |
+| Ventaja injusta declarada (zonificación digitalizada) | **Disputada.** El competidor ofrece zonificación operativa |
+| Concepto B — descarte por conflicto de incentivos | **Se mantiene** |
+| Concepto C — segunda fase institucional | **Se mantiene** |
+| Supuesto de ausencia de competencia directa | **Invalidado** |
+
+### Nueva barrera defendible
+
+La ventaja no puede sostenerse sobre la zonificación. Se traslada a:
+
+1. **La capa registral (SUNARP)** — no visible en la oferta pública del competidor, y con el comparable económico más alto del sector: USD 16 200 millones anuales en EE. UU.
+2. **El conocimiento del mecanismo de fraude local** — predio rústico vendido como urbano, predio del Estado comercializado por seudodirigentes. Requiere partida registral y habilitación urbana, no valorización.
+3. **El segmento** — comprador único del borde informal frente a corredor o inversionista recurrente. El competidor cobra por suscripción mensual; ese modelo no sirve a quien compra una vez en la vida.
+
+### Posicionamiento revisado del Concepto A
+
+> **Verificación registral y de habilitación urbana orientada a la prevención de fraude, para el comprador de primera vivienda en el borde de expansión informal de Arequipa — con cobro por evento, no por suscripción.**
+
+**Exclusión deliberada de alcance:** la valorización queda fuera. Es la capa central del competidor y no responde la pregunta que define el daño.
+
+### Condición
+
+La diferenciación depende de que el competidor efectivamente **no** cubra la capa registral. Eso es una inferencia a partir de su sitio público, **no un hecho verificado**. Deben ejecutarse las verificaciones V1–V4 de [`ubicabien.md`](../04-startups/ubicabien.md) antes de sostenerlo ante un jurado.

@@ -65,11 +65,14 @@ El proyecto propuesto se ubica exactamente en el primero de esos dos ejes.
 
 ## Conclusión regional
 
-> **Ningún actor latinoamericano identificado ofrece verificación integral de la condición legal-urbanística, de servicios y de peligro de una ubicación residencial.**
+> **CORREGIDO (16 de septiembre de 2026).** Esta sección afirmaba que ningún actor latinoamericano ofrecía verificación integral de una ubicación residencial. **La afirmación era falsa:** [UbicaBien](../04-startups/ubicabien.md) opera en Arequipa desde 2026 cubriendo valorización, zonificación, conectividad y desastres, con respaldo de ProInnóvate, StartUp Perú e Innicia (UCSM).
+
+El grueso del ecosistema regional —los actores listados arriba— sigue enfocado en la transacción y no en la verificación. Pero **en Arequipa el espacio no está vacío.**
 
 El foco regional está en **transacción y arrendamiento** —firmar más rápido, pagar más fácil, alquilar sin aval—, no en **verificación previa a la decisión**.
 
 Esto significa dos cosas simultáneas, y ambas deben declararse:
 
-1. **Oportunidad real:** el espacio está vacío en toda la región, no solo en el Perú.
-2. **Señal de advertencia:** que nadie lo haya hecho en un mercado de USD 1,1 billones puede indicar que el problema, aun siendo real, tiene una disposición a pagar menor a la que la magnitud del daño sugiere. Esta es precisamente la razón por la cual el veredicto del dossier de evidencia permanece en `PENDIENTE` hasta ejecutar el experimento.
+1. **Validación del problema:** un equipo con financiamiento público apostó a este problema en Arequipa. Es evidencia externa más fuerte que cualquier argumento propio, y levanta la advertencia previa de «si nadie lo construyó, quizá no hay demanda».
+2. **Amenaza competitiva real:** existe un actor lanzado, con planes de pago activos y respaldo institucional en la misma ciudad. El posicionamiento genérico de cinco capas ya no es diferenciable; la posición defendible es más angosta. Ver [`ubicabien.md`](../04-startups/ubicabien.md).
+3. El veredicto del dossier permanece en `PENDIENTE` porque la disposición a pagar **del segmento objetivo** continúa sin medirse.
