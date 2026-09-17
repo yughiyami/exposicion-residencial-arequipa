@@ -2,7 +2,9 @@
 
 **Pregunta que responde:** ¿cuál es la incidencia delictiva real en esta zona, y cómo se compara con otras?
 
-> Vertical de origen del proyecto. Tras el análisis comparado se reubica como **componente**, no como producto.
+> Vertical de origen del proyecto. Tras el análisis comparado se reubica como **componente**, no como producto — pero es el único vertical con **metodología estadística propia**, y por eso se promueve a **función clave**.
+>
+> **La especificación completa —fórmula, corrección de subregistro, bandas de semáforo adoptadas del INEI, variables precisas— vive en [`docs/05-producto/03-funcion-clave-indice-incidencia.md`](../05-producto/03-funcion-clave-indice-incidencia.md).** Esta ficha se conserva como diagnóstico de fuentes y contexto regional; no se duplica la metodología aquí.
 
 ---
 
@@ -23,7 +25,7 @@
 
 | Indicador | Valor |
 |---|---|
-| Victimización urbana | **33,5 %** — la mayor del país |
+| Victimización urbana | **33,5 %** — la mayor del país *(cifra 2025, UCSP/prensa; ver nota de discrepancia abajo)* |
 | Victimización según UCSP 2025 | 30,90 %, seis puntos más que en 2024 |
 | Percepción de inseguridad | 88 % |
 | Extorsión | De 6,8 a 30,6 denuncias por 100 mil habitantes entre 2019 y 2025 |
@@ -41,6 +43,8 @@
 ### 1. La cifra negra
 
 El mapa del delito se alimenta de **denuncias**, no de delitos. Arequipa registra 33,5 % de victimización, pero solo una fracción denuncia. La propia fuente policial reconoce que la extorsión está subregistrada por temor a represalias.
+
+> **Nota de discrepancia entre fuentes, declarada explícitamente.** El índice administrativo del INEI (IIC, 2023) ubica al departamento Arequipa **por debajo** del promedio nacional de inseguridad (0,357 vs. 0,37), y a Charcana (provincia La Unión) como **el distrito con menor inseguridad de todo el Perú**. El reporte Qawaq del MININTER (2019) ubica a la ciudad de Arequipa en posición **media** entre ciudades grandes (33,0 %, por debajo de Juliaca, Puno, Cusco y Tacna). La cifra de 33,5 % citada arriba proviene de encuesta directa de 2025. Tres metodologías, tres resultados. Detalle completo y fuentes en [`docs/00-evaluacion/04-referencias-academicas.md`](../00-evaluacion/04-referencias-academicas.md). **Esta discrepancia es el fundamento empírico de por qué el índice propuesto combina fuente oficial y reporte ciudadano — ver la función clave.**
 
 > Sin corrección, el índice mediría **propensión a denunciar**, no **riesgo real**.
 

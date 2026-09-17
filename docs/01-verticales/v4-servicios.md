@@ -2,7 +2,19 @@
 
 **Pregunta que responde:** ¿este predio tendrá agua potable y desagüe, y en qué condiciones?
 
-> El vertical con la **mayor brecha digital** de los cinco, y con la barrera de acceso más reveladora.
+> El vertical con la **mayor brecha digital** de los seis, y con la barrera de acceso más reveladora.
+
+---
+
+## 0. Por qué este vertical es necesario — no es un adorno
+
+Se justifica con tres tipos de evidencia, no con intuición:
+
+**Evidencia económica (por qué le importa al comprador).** La literatura hedónica internacional cuantifica el efecto de los servicios básicos sobre el valor de la vivienda de forma consistente en economías en desarrollo: en Indonesia, la disponibilidad de agua entubada incrementa el precio de alquiler urbano en **9,1 %**; en Ciudad de México, los hogares están dispuestos a pagar entre **5,8 % y 8,3 % del ingreso mensual** por un servicio de agua bien mantenido o mejorado (ver `docs/00-evaluacion/04-referencias-academicas.md`, A9–A10). No es una amenidad menor: es un componente medible y significativo del precio.
+
+**Evidencia normativa (por qué es una barrera real en Arequipa).** El propio trámite de factibilidad de SEDAPAR exige una memoria descriptiva firmada por un profesional colegiado y una ficha registral de antigüedad menor a 60 días — es decir, **el Estado ya reconoce que la factibilidad de servicios es una condición habilitante de la compra**, no un dato accesorio (ver §2 más abajo).
+
+**Evidencia de mercado (por qué el competidor lo intentó y no lo resolvió del todo).** La auditoría de UbicaBien (`docs/04-startups/ubicabien-auditoria.md`) confirma que sí incluyeron esta capa, con datos de cobertura de agua y alumbrado a nivel de cuadra — validación externa de que un equipo financiado consideró este vertical suficientemente importante como para construirlo primero, antes que la capa registral o de zonificación completa.
 
 ---
 
@@ -60,16 +72,22 @@ Contrastar con el dato nacional: solo el **13,8 %** de las viviendas informales 
 
 ---
 
-## Estrategia de aproximación para el producto
+## Estrategia de aproximación para el producto — variables precisas
 
-Ante la imposibilidad de consultar factibilidad por ubicación, el producto debe operar con **información proxy declarada como tal**:
+Ante la imposibilidad de consultar factibilidad por ubicación, el producto opera con **información proxy declarada como tal**, con cuatro variables específicas y sus fuentes exactas:
 
-1. **Proximidad a red existente** — derivada de la cobertura de servicio conocida y de la trama urbana consolidada
-2. **Condición de habilitación urbana** — vertical 2; un predio sin habilitación no tendrá conexión formal
-3. **Historial de cortes y abastecimiento por cisterna** en la zona — dato periodístico y de comunicación oficial del prestador
-4. **Señal explícita de incertidumbre** — el reporte debe indicar que la factibilidad formal solo la emite el prestador
+| # | Variable precisa | Fuente exacta | Qué responde |
+|---|---|---|---|
+| 1 | **% de cobertura de agua potable y desagüe a nivel de manzana o cuadra** | Censo Nacional 2017 (INEI), vía REDATAM o el mismo dato que UbicaBien ya demostró viable en su auditoría | ¿La mayoría de los predios vecinos ya tienen conexión? |
+| 2 | **Distancia en metros a la red de agua/desagüe más cercana** | Trazado de red del Censo 2017 o de la EPS, cuando esté disponible | ¿Qué tan lejos está la conexión más próxima? |
+| 3 | **Condición de habilitación urbana** (Vertical 2) | Capa de zonificación propia | Un predio sin habilitación **no** tendrá conexión formal, sin importar la proximidad física a la red |
+| 4 | **Historial de cortes y abastecimiento por cisterna** en la zona | Comunicados oficiales de SEDAPAR y prensa regional | ¿El servicio, aun si existe, es continuo o depende de cisterna? |
 
-Nunca debe presentarse una estimación proxy como si fuera un certificado de factibilidad. Es un límite de diseño, no una limitación temporal.
+**Fuente de la variable 1, verificada como viable:** la auditoría de UbicaBien confirmó en campo que el Censo 2017 del INEI entrega, a nivel de cuadra, población, viviendas, cobertura de alumbrado y **cobertura de agua potable** con distancia a la red más cercana. Es un dato público, gratuito, y **ya demostrado como técnicamente accesible por un competidor real** — no es una suposición de este repositorio.
+
+### Regla de presentación — no confundir proxy con certificado
+
+Nunca debe presentarse una estimación proxy como si fuera un certificado de factibilidad. El reporte debe indicar explícitamente: *«Esta es una estimación basada en cobertura del entorno (Censo 2017). La factibilidad formal solo la emite SEDAPAR.»* Es un límite de diseño, no una limitación temporal.
 
 ---
 

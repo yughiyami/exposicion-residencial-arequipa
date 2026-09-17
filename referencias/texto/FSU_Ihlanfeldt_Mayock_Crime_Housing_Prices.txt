@@ -1,0 +1,1251 @@
+                Crime and Housing Prices
+                      Keith Ihlanfeldt
+                       Tom Mayock
+
+Department of Economics and DeVoe Moore Center
+                 Florida State University
+
+                                                  February, 2009
+                                                 Abstract
+One of the most studied effects of crime is the impact that neighborhood crime has on
+housing values. By our count 18 studies have estimated this impact. A major drawback of
+these studies is that, although crime is undoubtedly endogenous in property value models,
+either because of simultaneity, omitted variables or measurement error, the majority of
+studies (12 studies) treat crime measures as exogenous independent variables. Of the
+limited number of studies (six studies) that do address the endogeneity of crime, the
+effect of crime is generally identified using questionable instruments.
+
+The purpose of our chapter is two-fold: (1) we provide the first critical review of the
+extensive literature that has dealt with the impact of crime on property values, and (2) we
+exploit a unique nine-year crime panel at the neighborhood level to estimate models that
+properly address the endogeneity of crime and allow us to overcome other specification
+errors that have plagued previous studies.
+
+Our results suggest that of the two major categories of crime (property and violent), only
+violent crimes exert a meaningful influence upon neighborhood housing values. A 10 per
+cent increase in violent crimes within a neighborhood is found to reduce housing values
+by as much as 6 per cent.
+Introduction
+
+Maintaining public safety is a major responsibility of local governments that accounts for
+a significant percentage of their budgets.1 To spend these dollars most effectively,
+reliable estimates of the costs of crime are needed to guide policy decisions.
+Unfortunately, this has proven to be a difficult task, principally because public safety
+(i.e., the absence of crime) is a non-market good, whose price can only be estimated
+implicitly. Typically, the market chosen to implicitly estimate the value of crime
+prevention is the housing market, where a hedonic price model is estimated that includes
+a measure of neighborhood crime among the regressors.
+
+The hedonic model approach to estimating the costs of crime is attractive theoretically.
+The seriousness that people attach to crime should be reflected in what they are willing to
+pay to live in a low crime neighborhood. Moreover, by including crimes of different
+types in the hedonic model, their relative importance can be determined. However, a
+major difficulty arises in estimating the crime-housing price relationship; namely, the
+endogeneity of crime must be dealt with in order to obtain consistent estimates. While the
+endogeneity of crime is widely recognized, it is remarkable that of the 18 hedonic studies
+we were able to find that included crime as an explanatory variable, 12 treated crime as
+an exogenous variable. Of the six studies that do instrument crime, only two tested the
+validity of the instruments, and in one case an overidentification test rejected the
+exogeneity of the instruments. Undoubtedly, the endogeneity of crime has been skirted in
+the literature for but one reason ­ it is extremely difficult to identify variables that satisfy
+the conditions required of a valid instrument: 1) that the variables be highly correlated
+with the endogenous crime measure, and 2) that the variables be uncorrelated with the
+error term and correctly excluded from the estimated housing price equation.
+
+The purpose of this chapter is two-fold: 1) we provide the first critical review of the
+extensive literature that has dealt with the impact of crime on property values, and 2) we
+exploit a unique nine-year crime panel at the neighborhood level to estimate models that
+properly address the endogeneity of crime and allow us to overcome other specification
+errors that have plagued previous studies. Our crime data are for census tracts in Miami-
+Dade County, Florida, and they span the years 1999-2007. We combine these data with
+repeat sales price indexes for single-family homes that we estimate for each tract, using
+thousands of repeat sales prices obtained from the county's property tax rolls. The
+endogeneity of crime is dealt with in two ways ­ we first difference the housing price
+index and the crime measures which controls for various endogeneities in crime levels,
+and we instrument changes in crime to allow for correlation between the crime measures
+and current and past values of the idiosyncratic error. This first-differences instrumental
+variables estimator allows us to consistently estimate the implicit cost of crime. We
+separately estimate the effects of violent and property crime on housing values.2 Our
+results indicate that only violent crime lowers neighborhood housing values. A one per
+cent increase in our preferred measure of neighborhood crime (number of violent crimes
+per acre) is found to reduce housing price by between .2 and .6 per cent.3
+
+Literature review
+Table 1 summarizes the 18 hedonic price studies that have included a measure of
+neighborhood crime among the explanatory variables. Fourteen of the studies find a
+negative, statistically significant relationship between one or more measures of crime and
+house value. Among the four studies that do not find a negative effect, one (Case and
+Mayer 1996) finds a positive, statistically significant effect.4 Overall, the fact that almost
+80 per cent of extant studies find that crime has a negative effect on property value makes
+it safe to conclude that crime matters to people and that they are willing to pay a higher
+housing price in order to avoid it. Unfortunately, however, little can be said regarding
+which crimes matter most based upon the studies that have been done. Seven of the 14
+studies that find a negative crime effect measure crime with a single variable (four use
+total crime, two use property crime, and one uses homicides). The seven studies that have
+more than one crime variable yield highly mixed results. In particular, there appears to be
+little consensus on whether violent crime is more or less important to people than
+property crime.
+
+Both studies employing a single crime variable and those using multiple crime variables
+have their limitations (apart from the endogeneity of crime problem discussed below).
+The single crime variable studies can be divided into two types ­ those that use a total
+crimes measure and those that measure the incidence of only a single type of crime (e.g.,
+property crime, but not violent crime, or just homicides).5 A simple count measure of the
+total number of crimes implicitly gives each type of crime the same weight. Generally,
+total crimes are limited to those tracked by the U.S. Federal Bureau of Investigation and
+labeled by the FBI as `Part I Crimes' or `indexed crimes.' These crimes include
+homicide, aggravated assault, rape, robbery, burglary, larceny, and auto theft. Clearly
+these crimes differ greatly in their severity,severity and a rape or murder should not be
+equated with a larceny or auto theft; or, more generally, violent crimes should not be
+lumped together with property crimes.6 Hence using a single total crimes measure is
+subject to considerable measurement error. Moreover, measuring just a single type of
+crime is subject to omitted variable bias, because, as we document below, violent and
+property crimes are highly collinear. Neighborhoods with a violent crime problem are
+also those with a property crime problem.
+
+In light of these criticisms, to avoid obtaining biased estimates, the preferred approach is
+to include measures of the incidence of each type of crime in the hedonic model. At a
+minimum, separate violent and property crime variables should be included. The
+problem, of course, as alluded to above, is that violent and property crimes are highly
+collinear; hence, multicollinearity makes it difficult to separate out their separate
+influences. One solution to this problem is to have panel data and first difference the data.
+As we document below, crimes by type are far less collinear in changes than in levels.
+
+Turning now to the endogeneity of crime problem, there are at least five mechanisms
+whereby crime may be endogenous in a housing price model. First, neighborhoods with
+cheaper housing attract lower income individuals, and it is well known that income and
+the propensity to commit crime are inversely related.7 Evidence also exists which shows
+that criminals commit the vast majority of their crimes within their home neighborhood
+(Reppetto 1974; Pope 1980). The implication is that criminals self-select neighborhoods
+to reside in with lower property values and commit many of their crimes within these
+neighborhoods. Second, neighborhoods with more expensive homes attract criminals by
+offering higher expected payoffs in terms of the market value of stolen goods. Third,
+crime statistics are limited to only those crimes that are reported to police. Reporting
+rates are known to be higher in more affluent neighborhoods (Skogan 1999). Fourth,
+some unobservables that increase the attractiveness of a property (e.g., large windows or
+a secluded back yard) also make the property an easier target for crime (Gibbons 2004).
+
+The above mechanisms all suggest that higher housing prices may raise neighborhood
+crime levels. A final mechanism, that suggests that crime will be less prevalent in more
+affluent neighborhoods, is the deterrence provided by self-protection measures. Self-
+protection is expected to be greater in wealthier neighborhoods because property owners
+are more able to afford it and they have more at risk.
+
+As noted above, while most studies have treated crime as exogenous to housing price, six
+studies have treated crime as an endogenous variable. However, only one of these studies
+(Gibbons 2004) fully validates the choice of instrumental variables (both first-stage
+regression results and, where equations are overidentified, tests of overidentifying
+restrictions were reported); and the instruments used by all studies are open to question.
+We review each of the studies that has treated crime as an endogenous variable below.
+Rizzo (1979) is the first study to instrument crime in a hedonic price model. He regresses
+the 1970 median contract rent or owner-estimated house value for 71 neighborhood
+communities (which are collections of census tracts) within the city of Chicago on the
+total crime rate reported for 21 police districts, with each neighborhood community
+assigned to a police district. To instrument the crime rate the following variables are
+used: the proportion of the population between ages 15 and 24, median years of
+schooling, the unemployment rate, population density, the proportion of the population
+receiving welfare, ratio of males to females, and the labor force participation rate. In both
+the rent and house value regressions, the coefficient on the crime variable using the
+instrumental variables estimator is substantially larger in absolute magnitude than the
+coefficient in the OLS model. Rizzo interprets his results as lending support to the
+position that simultaneity between crime and house value (rent) is a significant problem.
+Rizzo reports neither the first-stage regression results nor overidentification test results.
+Moreover, a number of his instruments proxy neighborhood quality and therefore
+probably should not have been excluded from his hedonic model.8 His evidence and
+conclusions are therefore open to question.
+
+Chronologically, the next study to instrument crime is by Naroff et al. (1980). Using
+Boston census tracts as the units of observation, the authors jointly estimate two
+equations ­ one with the dependent variable equal to the median owner-estimated house
+value of the tract and the other with the dependent variable equal to the total crime rate.
+The two variables that enter the crime rate equation that do not appear in the value
+equation (and thereby serve as instruments for the crime rate) are the population density
+of the tract and a housing quality variable which is a combination of the percentage of the
+units which have more than one person per room and the percentage of the units that do
+not have complete plumbing facilities. The estimated elasticity of house value with
+respect to the crime rate is -1.67. However, little confidence can be placed in this result
+given the authors' choice of instrumental variables. In particular, it is baffling why the
+housing quality variable would enter the crime but not the house value equation.
+
+The next study to instrument crime is by Burnell (1988). Like Rizzo, Burnell's data are
+for Chicago, but while Rizzo's communities lie within the city of Chicago, Burnell's are
+in the suburbs. Burnell uses 1980 data from 71 communities to estimate a system of four
+equations. His dependent variables are: median owner-estimated house value, the
+property crime rate, the number of full time police officers per thousand population, and
+per capita community revenue. The exogenous variables that enter the crime equation
+which are excluded from the house value equation are: the per capita community sales tax
+revenue, the average number of full time police officers per thousand population for
+contiguous communities, the average of the median housing values in contiguous
+communities, the average of the per capita sales tax revenue in contiguous communities,
+the community poverty rate, the median family income of the community, the median
+age of the community's population, the community unemployment rate, and the
+proportion of the population in the community that completed high school. The estimated
+elasticity of house value with respect to the property crime rate is -.10.
+It is difficult to judge Burnell's identifying restrictions. No tests of exogeneity are
+reported. The idea of using variables defined for contiguous communities as instruments
+for the property crime rate within the home community may have merit, as they should
+not affect house value in the home community but may affect the crime rate if criminals
+shift from one community to another in response to differences in expected returns and
+the probability of apprehension. But many of Burnell's instrumental variables simply
+describe the home community and therefore likely affect what people are willing to pay
+to live in the community, which suggests that they should not have been excluded from
+the house value equation.
+
+The only study from the 1990s to instrument crime is by Buck et al. (1993). Their study
+is unique in that it is the first to use panel data. For the years 1972-1986 they have
+property value and crime data for 64 communities located in the Atlantic City region of
+New Jersey. Unfortunately, they choose not to exploit the panel nature of the data (by, for
+example, including community fixed effects) but instead they estimate pooled cross-
+sectional models. Their dependent variable is an estimate of the market value of a square
+mile of land in the ith community in the tth time period computed from property tax
+assessments. Three types of property crime are accounted for among the explanatory
+variables: the larceny rate, the auto theft rate and the burglary rate. These crime rates are
+instrumented using `a complete set of lagged variables,' the distance from the community
+to the Atlantic City CBD, and the population density and unemployment rate of the home
+community. The authors report that their instruments failed an overidentification test, but
+they argue that `the test for overidentifying restrictions is not constructive in that it does
+not recommend a subsequent cause of action' (Buck et al.1993, p. 342). This statement is
+not totally accurate; the results from the overidentification test are constructive in that
+they indicate the need to continue to search for better instruments. Buck and his
+colleagues estimate numerous regressions for various subsamples of their data and obtain
+mixed results. When they use the full sample, the results are not only mixed but are
+somewhat counterintuitive: the larceny rate is not statistically significant, auto theft is
+positive and statistically significant, and the burglary rate is negative and statistically
+significant.
+
+The final two studies that treat crime as endogenous to property value are more recent.
+Using 1999-2001 data for London, England, Gibbons (2004) regresses individual house
+prices (n=8084) on burglary and vandalism crimes per square kilometer, after assigning
+both homes and crimes to a 100 meter grid. In the fashion of a standard fixed effects
+estimator, Gibbons first transforms his data by taking deviations from local district
+averages of the variables. In this way, unobservables that are constant within the district
+are eliminated as a source of endogeneity. To further address the endogeneity of crime he
+instruments his two crime variables (the density of burglary and vandalism crimes against
+residences) using as instrument variables the density of burglary and vandalism crimes
+against non-residential buildings. In an alternative model, distance to the nearest public
+house or wine bar, and its polynomials, are used to instrument the density of vandalism
+crimes, based on the argument that alcohol consumption is an associated factor in many
+types of crimes. The instruments are found to be significantly correlated with the crime
+densities and pass Sargan's test for the validity of the overidentification.
+Gibbons' results indicate that vandalism but not burglary crimes have an impact on home
+prices. A one-tenth standard deviation decrease in the local density of vandalism crime
+adds 1 per cent to the price of an average Inner London property. He explains his
+somewhat counterintuitive results by arguing that acts of vandalism (but not burglaries)
+motivate fear of crime in the community and may be taken as signals or symptoms of
+community instability and neighborhood deterioration in general.
+
+Of the six studies that have addressed the endogeneity of crime problem, Gibbons' is the
+only one that does so in a convincing fashion. His instrumental variables are supported
+theoretically (i.e., he establishes a plausible link between the variables and crime, a
+priori), and the instruments pass the standard IV validation tests. There are, however, two
+concerns with his study. First, vandalism crimes are likely to be underreported relative to
+burglaries and other types of crime. It is not clear whether his instrumentation adequately
+handles the measurement error that arises from underreporting. Generally, measurement
+error in an independent variable causes an attenuation of its estimated effect, which
+suggests that Gibbons may have underestimated the negative effect that vandalism has on
+property value. But we might also expect that the reporting rate would vary across
+neighborhoods and thereby the measurement error may be correlated with house price. In
+this case, it is difficult to predict whether the estimated effect of vandalism on property
+value has been under- or over-estimated. If the instrumental variables are uncorrelated
+with possible spatial variation in reporting, then consistent estimates can still be claimed.
+But this seems unlikely in Gibbons' case, since the rate of vandalism against residences
+(the independent variable) and the rate of vandalism against non-residential property (the
+instrumental variable) are both likely to be more severely underreported in deteriorating
+neighborhoods.
+
+A second limitation of Gibbons' study is that violent crimes are excluded from his
+hedonic model. As noted above, property and violent crimes are highly collinear in levels
+and therefore excluding violent crimes may result in omitted variable bias. Hence, what
+Gibbons observes as a negative effect of vandalism on property value may actually be the
+result of a more plausible effect of violent crime on property value being registered
+through the estimated vandalism coefficient.9
+
+The most recent study to treat crime as endogenous in a hedonic price model is by Tita et
+al. (2006). Their data link 43 000 house sales from Columbus, Ohio for the years 1995-
+1998 to crimes at the census tract level for 189 tracts. They use three crime measures: the
+total crime rate (total crimes include the seven FBI indexed crimes), the property crime
+rate and the violent crime rate. They regress house price on the crime rate and the change
+(measured over the preceding year) in the crime rate, running separate regressions for
+each alternative measure of crime. In each equation, two crime variables (level and
+change) are treated as endogenous, using as instrumental variables the murder rate and its
+change, so that each equation is just identified. Four models are estimated: one for all
+tracts and separate equations for low, medium, and high income tracts. The key results
+are that a positive change in the violent crime rate reduces house value in low and high
+income neighborhoods and the level of both the violent and property crime rate reduces
+property value in high income neighborhoods. No explanation is given for the particular
+pattern of significant versus insignificant results observed across the types of
+neighborhoods and between levels and changes in crime.
+
+The authors claim that murder is an `ideal' instrument because it is significantly
+correlated to violent crime. Given that violent crime includes murder, such an association
+is expected. However, they offer no evidence in support of their claim. They also use
+murder to instrument property crime, but make no claim regarding the association
+between these two variables. Because their models are exactly identified,
+overidentification tests could not be done.
+
+While the murder rate may be highly correlated with the endogenous crime measure
+included in the hedonic price model, it is unlikely to satisfy the other conditions required
+of a valid instrument. First, the murder rate may have its own direct effect on house value
+and therefore should not be excluded from the hedonic model. Second, undesirable
+neighborhood characteristics (e.g., the presence of crack houses) are likely to be
+correlated with both housing prices and the murder rate. As is generally true with the
+other studies utilizing instrumental variables to estimate the cost of crime, the ad hoc
+nature of Tita et al.'s instrumentation makes it difficult to interpret their results.
+
+Having provided a critical review of the extant literature relating house value to
+neighborhood crime, we next provide some new evidence that addresses the limitations
+that we have identified in previous studies.
+Data
+
+Our panel data set is constructed from two sources ­ the Miami-Dade property tax rolls
+obtained from the Florida Department of Revenue (FDOR) and a database of crime
+incident reports maintained by the Miami-Dade County Sheriff's Office. These data
+sources and how we used them to construct our panel are described below.
+
+Florida statutes require that each county annually submits its property tax roll in a
+standardized format to FDOR for auditing purposes. These rolls span the years 1995 to
+2007. Among the items included on the rolls is a detailed code indicating the current land
+use of each parcel, the interior usable space for improved properties, and the price and
+date of sale for the two most recent property transfers. Additionally, three fields in the
+FDOR rolls indicate the township, range, and section (TRS) from the Public Land Survey
+System (PLSS) within which the parcel is situated.10 The TRS can be used to place each
+parcel within a one-mile by one-mile square.
+
+Our goal is to investigate the impact of crime on property value at the neighborhood
+level. Census tracts are the most common geographical areas used to represent urban
+neighborhoods. The U.S. Census Bureau defines a census tract as a homogenous area in
+regards to the characteristics of the population, their economic status, and their living
+conditions. A tract generally has between 2500 and 8000 residents. Because the FDOR
+tax rolls report only PLSS and not Census geography, we cannot assign parcels to census
+tracts.11 However, we can approximate the Census geography using the TRS squares. To
+generate this approximation, we first determine the census tract within which the centroid
+of each TRS is contained using Geographic Information Systems technology.12 The
+result of this process is a TRS-tract crosswalk that can be used to assign parcels from any
+tax roll to tract-like areas. Our neighborhoods can be interpreted as the best
+approximation to census tract geography using one-mile by one-mile squares.13
+
+After using the TRS-tract crosswalk to assign each parcel to a tract, we then construct a
+number of variables to be used in our empirical model. One set of variables captures
+inter-neighborhood and intertemporal differences in commercial land use composition.
+More specifically, for each of 25 different commercial land use classifications, we
+construct two variables: a count variable measuring the total number of parcels of that
+land use type within the tract and a continuous variable measuring the total amount of
+interior square footage of that land use type within the tract. It is from these commercial
+land use variables that we construct our instrumental variables.
+
+Another variable we construct for each tract/year record is a constant-quality house price
+index value. This value is obtained by using the information on the two most recent sales
+transactions to estimate standard repeat sales models separately for each tract:
+
+ lni,t           k   D  i,k  i ,t ,t n                                (1)
+i ,t n      k 1
+
+where Pi,t is the most recent selling price of property i at time t;
+Pi,t-n is the previous selling price of property i at time t-n;
+k is the logarithm of the cumulative price index in period t;
+Di,k is a dummy variable which equals -1 at the time of the initial sale, +1 at the time of
+the second sale, and 0 otherwise; and
+i,t,t-n is the regression error term.
+If t denotes the estimate of the year t coefficient, the price index value for year t (It)
+equals exp (t)*100.
+
+Our other source of data is the crime incidence reports provided by the Miami-Dade
+County Sheriff's Office. This database, which contains information on more than 2
+million crimes occurring between 1999 and 2007, identifies the date, time, and type (e.g.,
+burglary, robbery) of each crime reported in unincorporated Miami-Dade County and the
+municipalities of Miami Gardens, Miami Lakes, Doral, Palmetto Bay and Cutler Bay. As
+of 2007, this collection of six jurisdictions had a total population of 1.3 million people,
+which amounts to roughly 54 per cent of the total population of Miami-Dade County. The
+most unique aspect of the crime database is that it contains the exact location at which the
+crime was committed. This enabled us to assign crimes to tracts in the same way we
+assigned homes to tracts, as described above. Crimes are broken down into their two
+major categories: violent crime (homicide, aggravated assault and robbery) and property
+crime (burglary, motor theft and larceny).14
+
+In the literature that has investigated the effect of crime on property values, crime has
+been measured at the neighborhood level in three different ways (see Table 1): number of
+crimes versus number of crimes per resident versus number of crimes per acre (or other
+spatial unit). The latter two measures are commonly referred to as the crime rate and the
+crime density, respectively. Of the three alternative measures, the crime rate has been the
+most popular measure, presumably because it best registers the individual resident's risk
+of victimization. Criminologists have argued, however, that at the neighborhood level (in
+comparison to the city level, which is the level at which crime rates are reported by the
+FBI) the crime rate is a less reliable measure of residents' probability of being victimized
+because crime is higher where business activity is greater and the latter activity varies
+greatly across census tracts.15 Moreover, Bowes and Ihlanfeldt (2001) have argued that
+crime density may be more highly correlated with the average resident's knowledge of
+crimes committed in his neighborhood. Crime density may also be a better measure of
+neighborhood crime than the crime rate if people wish to avoid exposure to crime. The
+latter equals the probability of being either a victim of crime or a witness to a crime. This
+probability is better measured by the number of crimes in a unit of space than by the
+number of crimes per resident. All three alternative crime measures are included in our
+panel so that we can experiment with each one in estimating our models.
+
+Our panel includes nine years of data for 130 tracts, yielding a total of 1170 tract/year
+observations. As described below, we first difference the data and allow for distributed
+lagged effects going back four years. This leaves us with 520 observations. For 18 of
+these observations a house price index value could not be computed due to an insufficient
+number of sales transactions, resulting in a final sample size of 502 observations.
+
+Models used to estimate the housing price-crime relationship
+To estimate the effect of crime on housing price, we first difference the data and regress
+the change in the housing price index on changes in crime. Focusing on housing price
+changes rather than levels helps mitigate possible bias resulting from each of the sources
+of the endogeneity of crime identified above. For example, crime may be worse in
+neighborhoods with lower housing prices because criminals are more likely to live in
+these neighborhoods and, as noted above, criminals tend to commit their crimes close to
+where they live. Criminals may also be more likely to live in neighborhoods experiencing
+less price appreciation. To the extent that this relationship between the location of
+criminals and neighborhood affluence is time-invariant, the standard first differences
+estimator provides consistent estimates of the effect of crime on housing prices, in the
+presence of arbitrary correlation between the regressors and that portion of the composite
+error term that is constant within the tract.16 Similar arguments can be made in favor of
+first differencing the data for the other four sources of crime endogeneity.
+
+Another advantage from first differencing the data is that multicollinearity among the
+variables measuring each type of crime is substantially reduced. Table 2 presents
+correlation coefficients between property and violent crime, in both levels and changes,
+using as the crime measure the number of crimes per acre within the tract.17 Levels of
+crime density are highly collinear, with a correlation coefficient of .71. In contrast, the
+correlation between changes in violent and property crime density is only .22.
+
+The basic model we estimate to investigate the effect of crime on housing price can be
+expressed as:
+JH
+
+   i,t   t    j,th Ci, j,th   i,t       (2)
+
+j1 h0
+
+where it is the change in the repeat sales price index in tract i between year t and year t-
+
+1;  t are time fixed effects (i.e., year dummy variables); and j represents the two different
+
+types of crime (property and violent).
+
+For each type of crime, we include the current change (Ct - Ct-1) and four lags (Ct-1 - Ct-2,
+Ct-2 - Ct-3, Ct-3 - Ct-4, Ct-4 - Ct-5). The expectation is that the full impact of a spike in crime
+on housing price will occur with a lag. First, it takes time for new information regarding
+the safety of a neighborhood to be fully assimilated by market participants. Second,
+current changes in housing prices reflect to some extent prices agreed upon before the
+increase in crime occurred, given that the price is recorded at the time of closing and
+considerable time may expire between when an agreement is reached and the date of
+closing.
+
+The two most widely-used panel data estimators, the first difference estimator and the
+fixed effects estimator, are consistent under the assumption of strict exogeneity, which
+rules out any correlation between the regressors and the error term in any time period,
+current, future or past (Wooldridge 2002, p. 254). An important implication of strict
+exogeneity is that current values of the dependent variable cannot affect current or future
+values of the explanatory variables. For example, if an increase in t causes an increase
+in Ct+2, strict exogeneity is violated. Thus, although the first difference estimator is
+consistent in the presence of correlation between reported criminal activity and the tract-
+specific fixed effect, the first difference estimator will generally be inconsistent if our
+crime variables are correlated with that portion of the composite error term that varies
+over time.
+
+While strict exogeneity may or may not hold for violent crime, it is unlikely to hold for
+property crime. Criminals in search of valuable goods to steal are likely attracted to
+neighborhoods with rising housing values. In this case, the increase in price in period t
+will raise property crimes in t or more likely t+µ, resulting in a violation of strict
+exogeneity.
+
+The solution to the strict exogeneity problem is to instrument Ct and possibly Ct-1,
+depending on one's assumptions. Under the assumption of sequential exogeneity, there is
+no contemporaneous feedback and It is allowed to affect only future changes in crime
+(Ct+1, Ct+2, ...). In this case, only Ct requires instrumentation. However, if we allow
+for the crime levels to be correlated with contemporaneous as well as past values of the
+error term, then both Ct and Ct-1 must be instrumented. It is reasonable to assume
+sequential exogeneity, because it seems unlikely that criminals would react to changing
+neighborhood housing values without some delay. Just like home buyers in their response
+to changing neighborhood crime levels, it takes time for criminals to obtain and
+assimilate new information regarding neighborhood crime opportunities and change their
+behavior accordingly. Nevertheless, we estimate (2) instrumenting just Ct, but also run
+regressions where both Ct and Ct-1 are instrumented.
+In most cases, when using panel data the choice of instruments is an easy one. Lagged
+levels of the endogenous change variables typically make good instruments because
+levels and changes are correlated and the lagged values are generally assumed to be
+exogenous. But this strategy will not work in our case, because lagged changes in crime
+enter our model as explanatory variables.18 Another challenge that instrumentation poses
+for our model is that there are four variables (two crime types, with Ct and Ct-1
+endogenous) that must be instrumented, if the assumption of sequential exogeneity is not
+made.
+
+Our instrumentation strategy involves using our data on the commercial land uses that
+exist within each tract. Recall that there are 25 different commercial land use categories,
+and for each one we know the number of establishments and the total square footage
+within the tract. We first difference these data and alternatively use lagged changes in the
+number of establishments and in the total square feet of interior usable space as
+instruments. In each case there are 25 instrumental variables ­ one for each land use
+category.
+
+The logic underlying our choice of instruments is that the criminal's opportunity set
+depends on the commercial land uses that exist within the tract. Some land uses are
+excellent targets for some types of crime, while other land uses favor other types of
+crime. For example, a new convenience store provides an opportunity to commit a
+robbery (a violent crime), while more offices create more locations that can be
+burglarized (a property crime). Hence, we expect that changes in particular types of crime
+are correlated with past changes in particular commercial land uses.
+
+A concern regarding our instruments is that the commercial activity within a
+neighborhood may have positive or negative direct effects on nearby property values.
+Negative effects are possible if some types of commercial land use generate traffic, noise
+or other negative externalities. Positive effects are possible if commercial activity
+provides convenience for shopping or entertainment. However, these effects, whether
+positive or negative, are likely to be the result of differences in average levels of overall
+commercial activity rather than marginal changes within individual land use categories.
+For example, homes may sell for more in neighborhoods that offer more total shopping
+opportunities, but another shoe store is not likely to alter the attractiveness of the
+neighborhood.
+
+In short, our argument is that a marginal change in a single commercial land use category
+will affect the opportunity landscape for criminal activity but will not affect the
+attractiveness of the neighborhood (apart from the effect that the change in land use has
+on attractiveness through its effect on crime). One way to bolster our argument is to
+purge from our set of instruments those land use categories that include shopping, eating
+and drinking establishments. If marginal changes do matter, they would seem to matter
+more for these particular land uses, resulting in important changes in our results. As
+reported below, paring down our list of instruments in this way has little effect on our
+results.
+Ultimately, the validity of our instrumentation strategy rests upon the performance of the
+instruments. Specifically, are they highly correlated with the endogenous variables? Are
+they correctly excluded from the price equation? Are they uncorrelated with the error
+term of the price equation? As reported below, statistical tests directed at answering these
+questions support our chosen instruments.
+
+Spatial variation in neighborhood crime
+
+Before discussing the results from estimating the house price models, the substantial
+variation in crime across neighborhoods is shown with the data. First, the average number
+of crimes per acre and the average number of crimes per 1000 persons were computed for
+each tract over the nine years that make up our panel. This statistic can be interpreted as
+the average reported criminal activity in the tract over the duration of the panel. Next, the
+mean of these averages was computed for each quintile in the crime distribution, where
+the bottom quintile is the 20 per cent of tracts with the lowest crime densities (rates) and
+the top quintile is the 20 per cent of tracts with the highest crime densities (rates). These
+means are reported in Table 3 for total crime, violent crime and property crime.19
+
+The mean number of total indexed crimes per acre (per 1000 population) is 13 (6) times
+greater in quintile 5 than in quintile 1. Substantial variation in crime is also found for
+each of the two categories of crime. This is especially true for the violent crimes. For
+example, the average number of violent crimes per acre in the fifth quintile is 32 times
+greater than the density of violent crimes in the first quintile.
+
+We also computed the average annual change in the crime density and in the crime rate
+over the panel for each tract. The means of these averages, again broken down by
+quintiles, are also reported in Table 3. Once again, there is considerable variation across
+quintiles, regardless of the type of crime. In the lower quintiles, the mean changes are all
+negative, indicating that, within these tracts, crime tends to fall from one year to the next.
+In contrast, within the fifth quintile the mean change is always positive, and in most cases
+this is true within the fourth quintile, as well.
+
+Besides the crime quintiles, at the bottom of Table 3 we report means by quintiles for
+household income and the rate of house price appreciation, the latter measured over the
+last four years of the panel, 2004 to 2007. The income quintiles show that the
+neighborhoods in our sample differ widely in income. In the 20 per cent of tracts with the
+highest incomes, mean income is more than twice as high as in the 20 per cent of tracts
+with the lowest incomes. Similarly, there is variation in house price appreciation, with
+prices rising more than twice as fast in the top appreciation quintile in comparison to the
+bottom appreciation quintile.
+
+Finally, instead of using their own quintiles, we report mean household income and the
+mean appreciation percentage within the violent crime and property crime density
+quintiles. As expected, average household income is lowest in the top violent crime
+quintile and highest in the bottom violent crime quintile. In the case of property crime,
+while household income is again the lowest in the top crime quintile, it is highest in the
+second quintile. What may appear surprising is that house price appreciation is highest
+within the highest crime quintile, for both violent and property crime. This seeming
+anomaly is explained by the tendency of lower priced homes to appreciate at a more rapid
+rate than higher priced homes within Miami-Dade County over the specified time period
+(2004-2007).
+
+Which measure of crime is best?
+
+In this section we present the results from estimating OLS versions of (2), using the three
+alternative measures of crime: the number of crimes, the crime rate and the crime density.
+These regressions are run to determine which measure performs best in explaining
+neighborhood housing prices.
+
+Of the three measures, changes in crime density explain the greatest variation in the
+change in the price index (see Table 4). The crime rate, which has been the most used
+measure of neighborhood crime, performs the worst. These results are consistent with
+those obtained by Bowes and Ihlanfeldt (2001), who also find that crime density
+outperforms the crime rate in explaining inter-neighborhood variation in housing prices.
+A number of arguments were made above for why density turns out to be the preferred
+measure of crime. In light of the findings presented in Table 4, we estimate our 2SLS
+models using crime density as our measure of neighborhood crime.
+The OLS crime density results (Column 3 of Table 4) show that none of the changes in
+property crime has a statistically significant effect on the change in the house price index.
+In contrast, three of the violent crime changes (t-2, t-3 and t-4) are significant with
+negative signs.
+
+Strict exogeneity tests
+
+Our strict exogeneity tests are those suggested by Wooldridge (2002). They involve
+adding to (2) crime levels measured for different time periods. If strict exogeneity is
+satisfied, crime levels for the current or any future or past period of the nine year panel
+should not be statistically significant. There are two restrictions on our choice of level
+variables to include in (2): 1) if we wish to maintain our sample size, future levels (t + )
+cannot both be included and 2) because we use lagged changes in crime as explanatory
+variables, level variables from any two consecutive periods (e.g., t and t-1) cannot be
+included. In light of these restrictions we include Ct for each type of crime separately and
+together. We repeat these estimated regressions using Ct-1 in place of Ct. In all cases (see
+Table 5), the results show that levels of both violent crime and property crime are
+statistically significant, indicating that neither type of crime is strictly exogenous. This
+implies that (2) should be estimated by 2SLS, with both changes in violent and property
+crime requiring instrumentation.
+
+Results from estimating the house price index models
+Estimates of (2) using 2SLS are reported in Table 6. Column 1 presents the results from
+instrumenting Ct for violent and property crime. Recall that this estimation strategy
+assumes sequential exogeneity. Dropping this assumption, Column 2 presents the results
+from instrumenting both Ct and Ct-1 for both crime categories.
+
+Two different but related instrumental variable sets are available. One set uses lagged
+changes in the interior usable square footage of individual commercial land use
+categories as instruments. The other uses lagged changes in the number of establishments
+falling within these categories.
+
+To determine which IV set to employ, as well as the lag length of the variables, we
+experimented with both sets and possible lags. The IV set based on changes in interior
+space and a two-year lag was found to yield the highest joint F-statistics in the first-stage
+regressions of the 2SLS models.20 These variables also convincingly passed Hansen's J-
+statistic test (see bottom of Table 6). This is a test of the joint hypothesis that the
+instrumental variables are uncorrelated with the error term and correctly excluded from
+the estimated change in house price index equation.
+
+When instrumenting just Ct (Column 1) none of the property crime variables is
+statistically significant. Of the violent crime variables,. the t and t-1 change variables are
+not significant, but the t-2, t-3 and t-4 changes are all highly significant with a negative
+sign. The timing pattern revealed by these results suggests, for example, that an increase
+in the density of violent crime in 2004 (above that reported in 2003) would first lower
+neighborhood housing prices in 2006 (relative to their values in 2005). Summing up the
+estimated coefficients on the significant violent crime variables yields an estimate of the
+Long Run Propensity (LRP). The LRP represents the change in the house price index that
+would occur within the neighborhood if there was a permanent increase in the crime
+measure. The LRP and its p-value are reported at the bottom of Table 6. The estimated
+LRP for violent crime is -1177, with a p-value equal to .000. We also use the estimated
+LRP to calculate an elasticity of house value with respect to crime, evaluated at the point
+of means. This elasticity is -.238, indicating that a 10 per cent increase in the violent
+crime density within a neighborhood reduces house values by 2.4 per cent.
+
+The results presented in Column 2 of Table 6 are those obtained from instrumenting both
+Ct and Ct-1. One of the property crime variables, the t-1 change, is negative and
+significant, but only at the 10 per cent level. Among the violent crime variables, the t-3
+and t-4 change variables are negative and highly significant. The implied violent crime
+LRP is -1020 (p-value=.000) and the implied elasticity is -.206. Hence the violent crime
+results from instrumenting both Ct and Ct-1 are quite similar to those obtained from
+instrumenting just Ct.21
+
+While the tests of strict exogeneity indicated the need to instrument both violent and
+property crime, the 2SLS results presented in Table 6 are quite similar to the OLS results
+presented in Table 4. Both sets of results yield the same conclusion; namely, that violent
+crime, but not property crime, affects what home buyers are willing to pay for housing in
+different neighborhoods.
+
+A possible limitation of the results presented in Table 6 (and Table 4) is that they are
+generated from an equation that includes only year dummies as control variables.
+Omitted variable bias may result if there are variables, other than the crime variables, that
+are changing over time within tracts that are both correlated with crime and have their
+own direct effect on neighborhood housing price. We took two approaches to address this
+issue. First, we added to the model current and lagged changes in three variables: the total
+interior square footage of commercial space within the tract, the total interior square
+footage of industrial space within the tract, and the total interior space of multi-family
+housing within the tract. Only the LRP for multi-family housing is statistically
+significant, with a positive sign. Apparently, the multi-family variables capture changes
+in the attractiveness of the neighborhood that are not accounted for if only the crime and
+year variables are included in the model. However, the inclusion of the multi-family
+variables had little effect on the estimated crime LRPs. The results continue to show, with
+the same consistency across specifications, that violent crime is the only type of crime
+that matters to neighborhood housing price.
+
+The other approach we took to investigate the possibility of omitted variable bias
+involved using our instrumental variables. If the crime variables are correlated with the
+error term as the result of omitted variables, unbiased estimates can be obtained by
+instrumenting the crime variables. As noted above, in the specification that does not
+assume sequential exogeneity, we are instrumenting Ct and Ct-1 for both types of
+crime. But omitted variables may bias the estimated coefficients on the other crime
+variables (Ct-2, Ct-3, and Ct-4).
+
+We therefore instrumented all ten crime variables entering (2) (Ct, Ct-1, Ct-2, Ct-3,
+Ct-4 for both categories of crime). For this model the instrumental variable set based on
+changes in the number of establishments within each commercial land use category,
+lagged four years, best satisfied our IV validation tests. For all ten endogenous variables
+the first-stage F-statistics are significant at the 1 per cent level and the exogeneity of the
+instrumental variables could not be rejected based on Hansen's J-statistic. However,
+simultaneously treating all ten crime variables as endogenous clearly stretches what can
+meaningfully be done with our data. These results should therefore be interpreted with an
+appropriate degree of caution.
+
+The results are reported in Column 3 of Table 6. Once again, none of the property crime
+variables is significant. Of the violent crime variables, the t-3 and t-4 changes are
+significant, mirroring the results presented in Column 2, where Ct and Ct-1 are
+instrumented . instrumented. The results are therefore consistent with the OLS and other
+2SLS results, which point to violent crime as the type of crime that matters to property
+values. However, the estimated LRP (-3104) and elasticity (-.627) are substantially larger
+than those suggested by the previous results.
+
+Conclusion
+In this chapter we first reviewed the extensive literature that has related crime to housing
+values. We found that the most remarkable feature of this literature is that the vast
+majority of studies treat crime as an exogenous variable in estimated hedonic models. Of
+the minority of studies that endogenize crime, each study either uses a questionable
+instrumentation strategy or suffers from other possible specification errors.
+
+In an attempt to deal with the endogeneity of crime and avoid other methodological
+weaknesses found in previous studies, we utilize a nine-year panel of crime for Miami-
+Dade County at the neighborhood level. Using state-of-the-art panel data estimation
+techniques we find that home buyers are willing to pay nontrivial premiums for housing
+located in neighborhoods with less violent crime. Our most reliable estimates suggest that
+the elasticity of house value with respect to the neighborhood density of violent crime is
+roughly equal to -.25. We find no evidence that property crime has an impact on housing
+prices.
+
+The unimportance of property crime may reflect the fact that such crimes cause far less
+psychic harm to victims in comparison to violent crime. Moreover, self-protection
+measures are more effective in deterring property crimes. In particular, alarm systems can
+effectively protect residents from both burglary and auto theft.22 In comparison, there are
+a limited number of options that can offer protection against most acts of violence. The
+best option may be to self-select peaceful living environments, which our results suggest
+is an option that many households adopt.
+                                                Table 1
+                                   Crime/Property Value Studies
+
+Author(s) and  City       Year(s)  Data             Crime          Instruments  Validation of Findings
+Date of        St. Louis  1960                                                  Instruments
+Publication                                         Variables
+Ridker and
+Henning                            Median           Crime rate     None         None  Crime rate not
+1967                               owner-                          None               significant.
+                                   estimated        Crime rate of  None
+Kain and       St. Louis  1967     house value      Pauley block                None  Crime rate not
+Quigley                            for 167 tracts;                              None  significant for
+1970                               total indexed    Various crime                     renters or
+                                   crimes by        rates                             owners.
+Gray and       Minneapolis 1970    police district
+Joelson                            579 rent                                           Out of eight
+1977                               values, 275                                        types of crime
+                                   owner-                                             only vandalism
+                                   estimated                                          and burglary
+                                   values; crime                                      are significant:
+                                   rate of Pauley                                     1% increase in
+                                   block                                              burglary
+                                   Median                                             caused $336
+                                   owner-                                             decline in
+                                   estimated                                          house value,
+                                   house value
+                                   for census
+                                   tracts; eight
+                                   different types
+                                   of crime by
+                                   tract
+Thaler       Rochester  1971       398 home         Property        None            None  1% increase in
+1978                    1972-1974  values;          crime rate of                         vandalism
+                        1968-1972  property         tract                                 caused $117
+                                   crimes for                                             decrease in
+                                   census tracts                                          house value.
+                                                                                          Standard
+Hellman and  Boston                Median           Crime rate of   None            None  deviation
+Naroff                             owner-           tract                           None  increase in
+1979                               estimated                        Crime is              property crime
+                                   house value in   For block and   instrumental          reduces house
+Rizzo        Chicago               147 census       individual      in only the           value by 3%.
+1979                               tracts; index    sales           regression run        Elasticity of
+                                   crimes per       regressions:    for the 71            house value
+                                   tract            total crime     neighborhood          with respect to
+                                   1970 median      rate, property  communities,          crime rate =
+                                   rent for 111     crime rate,     instruments =         -.63.
+                                   blocks; 1970     violent crime   the proportion
+                                   median           rate of block;  of population         Generally, all
+                                   owner-           for 71          15-24, median         crime variables
+                                   estimated        neighborhood    years of              have negative
+                                   value for 68     communities,                          and significant
+                                   blocks; 324                                            effects across
+                                   single-family                                          the alternative
+                                   sales; for                                             data bases. For
+                                   above three                                            the data base
+                                   data sets total                                        where crime is
+                                                                                          instrumented,
+                                                                                          estimated
+                                                                                          crime
+Naroff,    Boston     1970  crime, violent   total crime     schooling,        None  coefficients are
+Hellman,                    crime,           rate of police  unemployment      None  much larger
+Skinner                     property crime   district        rate,                   than those
+1980                        by block;                        population              obtained with
+                            median           Crime rate of   density,                OLS.
+Dubin and  Baltimore  1978  owner-           tract           proportion of
+Goodman                     estimated                        population on           Elasticity of
+1982                        house value      Principal       welfare, males          house value
+                            for 71           components      to females,             with respect to
+                            neighborhood     for non-        and labor               crime rate =
+                            communities;     violent         force                   -1.67.
+                            for the latter   property crime  participation
+                            data, the 71                     rate                    Unit increase
+                            communities                                              in C1, C2 and
+                            are assigned                     Population              C3 reduces
+                            total crimes                     density of tract        house value by
+                            reported for                                             $795, $3143
+                            21 police                        None
+                            districts
+                            Median
+                            owner-
+                            estimated
+                            house value
+                            for census
+                            tracts; total
+                            crimes of tract
+                            1765 single-
+                            family sales;
+                            12 different
+                            types of crime
+                            for crime
+Burnell    Chicago          1980       reporting        (C1), violent    Community        None          and $3721,
+1988       suburban                    areas            crime (C2)       fiscal &                       respectively.
+           communities                                  and shopping     demographic      None
+                                       Median           center crime     characteristics                Elasticity of
+Clark and  Multiple         1979       owner-           (C3)                              Failed over-  house value
+Cosgrove   metropolitan                estimated        Property         None             ID test       with respect to
+1990       areas                       value for 71     crime rate                                      property crime
+                                       communities;                      Lags of          None          rate = -.10.
+Buck, Hakim, Atlantic City  1972-1986  property crime   Murder rate      explanatory
+                                       for each         estimated for    variables                      Elasticity of
+Spiegel    region                      community        each house as                                   house value
+                                       596 owner-       a function of    None                           with respect to
+1993                                   estimated        distance of                                     murder rate =
+                                       home values      house from                                      -.125.
+Taylor     Baltimore        1980       from Public      CBD
+1995                                   Use Micro-       Larceny, auto                                   Highly mixed,
+                                       data Sample      theft, burglary                                 with no
+                                                        crime rate of                                   consistent
+                                       Total assessed   community                                       finding across
+                                       value for 64                                                     alternative
+                                       communities;     1970 assault                                    model
+                                       larceny, auto    rate,  assault                                  specifications.
+                                       theft, burglary  rate,  murder
+                                       crimes for                                                        assault rate
+                                       each                                                             and  murder
+                                       community                                                        rate negative,
+                                       Median
+                                       owner-
+                                       estimated
+                                        house value rate                              significant
+                                        for 223 census                                effect on 
+                                        tracts; assault                               value, level of
+                                        and murder                                    assault rate
+                                        rates by tract                                positive,
+                                                                                      significant
+Case and      Eastern        1982-1992  Repeat sales     Crime rate of    None  None  effect.
+Mayer                                   price index for  town             None  None  Crime rate has
+1996          Massachusetts             168 towns;                        None  None  positive effect
+                                        total crimes     Density of                   on house price.
+Bowes and     towns                     per town         total crimes in        None
+Ihlanfeldt                              22 388 single-   tract                        Unit increase
+2001          Atlanta        1991-1994  family sales;                                 in crime
+                                        index crimes     Cost of violent              density reduces
+Lynch and     Jacksonville 1994-1995    for census       crime, cost of               house value by
+Rasmussen                               tracts           property crime               3 to 6 %.
+2001                                    2800 single-                                  Only houses in
+                                        family sales;                                 top two cost of
+                                        index crimes                                  crime deciles
+                                        for 89 police                                 suffer
+                                        beats                                         nontrivial loss
+                                                                                      in value from
+Schwartz,     New York       1975-1998  Repeat sales     Violent crime None           crime.
+Susin, Voicu                            for 25 947       rate, property               Only violent
+2003                                    sales pairs;     crime rate                   crime rate is
+                                        crimes for 75                                 significant,
+                                        police                                        unit increase in
+                                        precincts                                     violent crime
+                                                                                      rate reduces
+                                                                                      house value by
+Gibbons        London    1999-2001  10 464           Burglaries /    Commercial Yes     .12%.
+2004                                individual       kilometers,     crime              A one-tenth
+                                    single-family    vandalism /     densities,         standard
+                                    sales;           kilometers      distance to        deviation
+                                    burglaries,                      nearest public     decrease in the
+                                    vandalism                        house or wine      local density of
+                                    crimes for 100                   bar                vandalism
+                                    meter grid                                          crime adds 1%
+                                                                                        to house price;
+Tita, Petras,  Columbus  1995-1998  43 000 single-   Total crime     Murder rate  None  burglary crime
+Greenbaum                           family sales;    rate, violent                      rate not
+2006                                index crimes     crime rate,                        significant.
+                                    by census tract  property crime                     Crime is
+                                                     rate (entered                      capitalized into
+                                                     in levels and                      house price at
+                                                     changes);                          different rates
+                                                     separate                           for poor,
+                                                     regressions                        middle, and
+                                                     run for each                       wealthy
+                                                     type of crime                      neighborhoods,
+                                                                                        with violent
+                                                                                        crime most
+                                                                                        important.
+                                           Table 2
+Correlation Coefficients ­ Levels and Changes in Neighborhood Crime Density
+
+Violent    Violent  Property   Violent
+Property                         .22
+ Violent     .71      -.04
+ Property    .06       .04
+             .01
+                                                   Table 3
+                  Neighborhood Characteristics (Means of Nine-Year Averages)
+
+                      Mean                   Means by Quintile
+
+                      .465    (1)    (2)     (3)                (4)            (5)
+                      -.006
+Total crime a         66.9   .074    .269    .411               .603          .952
+   Density             -1.5  -.049   -.019   -.007              -.000         .008
+    Density                  22.9    39.7    54.2               78.8          136.4
+   Rate               .063   -6.6    -2.0     -.8                              1.9
+    Rate              -.002                                       .0
+                       8.8   .006                                             .189
+Violent crime b        -.2   -.008   .018    .034               .065          .002
+   Density                    1.6                                             25.8
+    Density           .406   -1.1    -.002   -.000              .000            .3
+   Rate               -.011
+    Rate              58.6   .070    2.9     4.5                8.9           .788
+                       -1.3  -.041                                            .008
+Property crime c             21.4    -.2     -.1                .0            115.6
+   Density                   -5.6                                              1.9
+    Density                          .253    .376               .533
+   Rate                              -.018   -.006              -.000
+    Rate                             36.5    48.4               68.7
+                                     -2.0     -.8
+                                                                  .2
+
+Household income 53 288      35 360  45 027  51 587             57 742        75 433
+%  Index 2004-07 37.2         23.0    32.1    36.4               42.4          51.7
+
+For violent crime d          64 504  60 242  54 141             49 944        40 347
+   Income                     33.9    32.1    33.3               38.2          47.2
+   %  Index
+
+For property crime e         58 700  60 816  53 725             50 112        42 748
+   Income                     35.1    33.4    35.9               37.3          43.2
+   %  Index
+
+a Total crime = murder + aggravated assault + robbery + burglary + motor theft + larceny.
+b Violent crime = murder + aggravated assault + robbery.
+c Property crime = burglary + motor theft + larceny.
+d The quintile means reported are for the violent crime density quintiles.
+e The quintile means reported are for the property crime density quintiles.
+                                                Table 4
+          OLS Estimates of Alternative Measures of Crime on House Price Index
+
+ Violent      Crime a   Crime Rate b  Crime Density c
+   t
+   t-1         -.050        -.401            -19
+   t-2        (.707) d      (.661)          (.896)
+   t-3         -.119       -1.200           -139
+   t-4        (.350)        (.138)          (.279)
+               -.275       -2.004           -255
+ Property     (.007)        (.000)          (.002)
+   t           -.664       -3.797           -506
+   t-1        (.000)        (.000)          (.000)
+   t-2                     -3.233           -413
+   t-3         -559         (.000)          (.000)
+   t-4        (.000)
+                             .113             33
+               .018         (.578)          (.237)
+              (.515)         .257
+               .024         (.173)            36
+              (.353)         .108           (.131)
+               .012         (.459)
+              (.563)         .118             23
+               .010         (.567)          (.293)
+              (.629)         .111
+               .014         (.491)            29
+              (.501)                        (.232)
+
+                                              22
+                                            (.335)
+
+R-square      .317      .312          .324
+
+Observations  502       502           502
+
+a Number of crimes in tract
+b Crime rate in tract = (#crimes in tract / population of tract) * 1000
+c Crime density in tract = #crimes in tract / land area of tract in acres
+d P-values in parentheses. These values are based on standard errors that are robust to
+
+heteroskedasticity and serial correlation.
+                                       Table 5
+                              Strict Exogeneity Tests
+
+                                    (P-values) *
+
+                   (1)   (2)   (3)                     (4)  (5)   (6)
+
+Property crime
+
+t                  .001                                     .027
+
+t-1                      .001                                     .027
+
+Violent crime
+
+t                              .000                         .000
+
+t-1                                  .000                         .000
+
+Joint F-statistic                                           .000  .000
+
+     * P-values are based on standard errors robust to heteroskedasticity and serial correlation.
+                                               Table 6
+                      Estimates of Crime Density on House Price Index
+
+                                    Two-Stage Least Squares
+
+ Violent               (1) a    (2) b                                   (3) c
+   t
+   t-1                 -139      413                                    766
+   t-2                (.780) d  (.354)                                 (.421)
+   t-3                           915                                   -678
+   t-4                 -190     (.059)                                 (.388)
+                      (.321)                                           -518
+ Property              -281      -17                                   (.603)
+   t                  (.004)    (.924)                                 -1488
+   t-1                 -511     -547                                   (.060)
+   t-2                (.000)    (.000)                                 -1615
+   t-3                 -385     -473                                   (.013)
+   t-4                (.001)    (.002)
+                                                                       -109
+                         85      121                                   (.568)
+                      (.288)    (.126)                                  247
+                                -106                                   (.325)
+                         55     (.084)                                  353
+                      (.124)                                           (.328)
+                                 -58                                    258
+                         26     (.161)                                 (.219)
+                      (.287)
+                                 -34                                     3
+                         30     (.271)                                 (.982)
+                      (.245)
+                                  -8                                   -3104
+                         16     (.780)                                 (.019)
+                      (.516)                                           -.627
+                                                                       20.5
+Violent, LRP e        -1177     -1020                                  (.306)
+                      (.000)    (.000)
+Elasticity f          -.238     -.206
+Hansen's J-statistic   20.4     12.8
+                      (.674)    (.937)
+
+Observations          502       502                                    502
+
+a  Violent crime density (t) and  Property crime density (t) are instrumented.
+b  Violent crime density (t, t-1) and  Property crime density (t, t-1) are instrumented.
+c  Violent crime density (t, t-1, t-2, t-3, t-4) and  Property crime density (t, t-1, t-2, t-3,
+
+t-4) are instrumented.
+d P-values in parentheses. These values are based on standard errors that are robust to
+
+heteroskedasticity and serial correlation.
+e LRP = long run propensity = sum of estimated violent crime coefficients that are
+
+statistically significant.
+f Elasticity estimated at point of means.
+                                               References
+
+Bowes, David R. and Keith R. Ihlanfeldt (2001), `Identifying the impacts of rail transit
+stations on residential property values', Journal of Urban Economics 50, 1-25.
+
+Buck, Andrew and Simon Hakim (1989), `Does crime affect property values?', The
+Canadian Appraiser 33 (4), 23-27.
+
+Buck, Andrew J., Simon Hakim and Uriel Spiegel (1993), `Endogenous crime
+victimization, taxes, and property values', Social Science Quarterly 74 (2), 334-348.
+
+Burnell, James D. (1988), `Crime and racial composition in contiguous communities as
+negative externalities', American Journal of Economics and Sociology 47 (2), 176-193.
+
+Case, Karl E. and Christopher J. Mayer (1996), `Housing price dynamics within a
+metropolitan area', Regional Science and Urban Economics 26, 387-407.
+
+Cohen, M.A., T.R. Miller and B. Wiersema (1995), Crime in the United States: Victim
+Costs and Consequences, Final Report to the National Institute of Justice.
+Dubin, Robin A. and Allen C. Goodman (1982), `Valuation of education and crime
+neighborhood characteristics through hedonic housing prices', Population and
+Environment 5 (3), 166-181.
+
+Eide, Erling (1994), Economics of Crime: Deterrence and the Rational Offender, New
+York: North-Holland.
+
+Gibbons, Steve (2004), `The costs of urban property crime', The Economic Journal 114,
+441-452.
+
+Gray, Charles and Mitchell R. Joelson (1979), `Neighborhood crime and the demand for
+central city housing', in C.M. Gray (ed.), The Costs of Crime, Beverly Hills, CA: Sage,
+pp. 47-60.
+
+Hellman, Daryl A. and Joel L. Naroff (1979), `The impact of crime on urban residential
+property values', Urban Studies 16, 105-112.
+
+Kain, John F. and John M. Quigley (1970). `Measuring the value of housing quality',
+Journal of the American Statistical Association 65, 532-547.
+
+Leven, Charles L. and Jonathan H. Mark (1977), `Revealed preferences for neighborhood
+characteristics', Urban Studies 14, 147-159.
+Lynch, Allen K. and David W. Rasmussen (2001), `Measuring the impact of crime on
+house prices', Applied Economics 33, 1981-1989.
+
+Naroff, Joel L., Daryl Hellman and David Skinner (1980), `Estimates of the impact of
+crime on property values', Growth and Change 11 (4), 24-30.
+
+Pope, C.E. (1980), `Patterns in burglary: An empirical examination of offense and
+offender characteristics', Journal of Criminal Justice 8, 39-51.
+
+Reppetto, Thomas A. (1974), Residential Crime, Cambridge, MA: Ballinger.
+
+Ridker, Ronald G. and John A. Henning (1967), `The determinants of residential property
+values with special reference to air pollution', Review of Economics and Statistics 49,
+246-257.
+
+Rizzo, Mario J. (1979), `The cost of crime to victims: An empirical analysis', Journal of
+Legal Studies 8,177-205.
+
+Schwartz, Amy Ellen, Scott Susin and Ioan Voicu (2003), `Has falling crime driven New
+York City's real estate boom?', Journal of Housing Research 14 (1), 101-135.
+Skogan, Wesley G. (1999), `Measuring what matters: Crime, disorder, and fear', in
+Robert H. Langworthy (ed.), Measuring What Matters: Proceedings From the Policing
+Research Institute Meetings, Washington, DC: U.S. Department of Justice, pp. 37-53.
+
+Stock, James H. and Motohiro Yogo (2005), `Testing for Weak Instruments
+in Linear IV Regression', in Donald W. K. Andrews and James H. Stock (eds),
+Identification and Inference for Econometric Models: Essays in Honor of Thomas
+Rothenberg, New York, NY: Cambridge University Press, pp. 80-108.
+
+Taylor, Ralph B. (1995), `The impact of crime on communities', Annals of the American
+Academy of Political and Social Science 539, 28-45.
+
+Thaler, Richard (1978), `A note on the value of crime control: Evidence from the
+property market', Journal of Urban Economics 5, 137-145.
+
+Tita, George E., Tricia L. Petras and Robert T. Greenbaum (2006), `Crime and residential
+choice: A neighborhood level analysis of the impact of crime on housing prices', Journal
+of Quantitative Criminology 22: 299-317.
+
+1 Expenditure data from the Florida Department of Financial Services indicates that in 2006, Miami-Dade
+County, the subject of our empirical investigation, spent over $540 million on law enforcement. This figure
+constituted over 15 per cent of all county expenditures in this fiscal year.
+2 Our definition of property crime is identical to the definition employed by the FBI and includes the crimes
+of burglary, motor theft and larceny. The FBI defines violent crime as murder, rape, robbery and
+aggravated assault. To protect the identity of victims of rape, the addresses of rape crimes are not reported
+and therefore could not be assigned to census tracts. Hence we define violent crime as murder, robbery and
+aggravated assault.
+3 Crimes per acre (crime density) is preferred over crimes per person (crime rate) because the former
+
+variable has greater explanatory power, as we will document below.
+4 Case and Mayer is not the only study to find that crime increases housing prices. Taylor (1995) includes
+
+both levels and changes in crime rates in his attempt to explain the change in house values within
+
+Baltimore's neighborhoods during the 1970s. While the change variables produce the expected negative
+
+signs, crime levels are found to be positively related to value appreciation.
+5 Some studies include more than one type of crime, but just two or three types. For example, Gibbons
+
+(2004) includes vandalism and burglary crimes and Buck et al. (1993) include larceny, auto theft, and
+
+burglary crimes. These studies are subject to the same criticism noted below of single crime variable
+
+studies; namely, omitted crime types that may affect property values are correlated with included crime
+
+types, resulting in possible omitted variable bias.
+6 A number of studies have attempted to calculate the cost incurred by victims of different types of crimes,
+
+where total cost is inclusive of both out of pocket (monetary) cost and the psychic cost associated with pain
+
+and suffering. All of these studies demonstrate that violent crime carries a higher cost than property crime.
+
+For example, Cohen et al. (1995) estimate that the total cost of a rape is $87 000, while that of a motor
+
+vehicle theft is $4000 (measured in 1993 dollars).
+7 For a review of the literature that links income to crime, see Eide (1994).
+8 For example, it is well known that homeowners prefer lower density neighborhoods, invalidating the use
+
+of population density as an instrumental variable.
+9 Gibbons is fully aware of the problem created by excluding a violent crime measure from his hedonic
+
+model. He offers some evidence using data at a higher level of spatial aggregation (equivalent to counties
+
+in the U.S.) that suggests that the omitted variable problem may not be severe. These data show that
+
+changes in crime rates of different types of crimes are not highly correlated. But this evidence has little
+
+relevance to his model, since his crime measures are not change (i.e., first differenced) variables.
+10 More information on the PLSS can be found at http://nationalatlas.gov/articles/boundaries/a_plss.html.
+
+Each township/range/section combination typically corresponds to a one-mile by one-mile square.
+
+Although quite rare, it can be the case that the TRS code identifies a geographic area that is larger or
+
+smaller than one square mile. This might be the case, for instance, in sections near jagged borders (e.g.,
+
+near the coast).
+11 The FDOR rolls can be matched with digital parcel maps using a unique parcel number from the tax
+
+rolls. Because these digital maps are only available for 2007, however, a number of problems arise when
+
+attempting to use the maps to determine the location of parcels from tax rolls prior to 2007. For instance, if
+
+a parcel was undeveloped in 2000, and then developed in 2001, the parcel identifier would generally
+
+change between the two years. Given the way the digital parcel map is formatted, this change in parcel
+
+number would make it impossible to identify the correct geography for the undeveloped parcel in 2000. As
+
+these types of matching problems appeared to lead to nontrivial loss of information, we decided to use the
+
+PLSS codes as the geographic identifiers, which do not suffer from the aforementioned matching problems.
+12 We use tract boundary files from the 2000 Census to generate this crosswalk.
+13 For the sake of expository flow, we refer to our neighborhood unit as a tract, as opposed to `tract-like'
+
+hereafter.
+14 As noted above, although the times and dates of rapes are reported in our database, the locational
+
+information of the incident is excluded so as to protect the identity of the victim. Hence we exclude rape
+
+from our definition of violent crime.
+15 See Harries (1981) for a review of the literature on this issue.
+16 After first differencing the data, the endogeneity issue is whether criminals are more likely to move into
+
+neighborhoods experiencing less price appreciation. This is not clear, but what is clear is that endogeneity
+
+arising from the movement of criminals is less likely to be a concern in comparison to that which arises
+
+from the location of criminals.
+17 As noted above, we use three alternative measures of crime ­ the number of crimes in the tract, the crime
+
+rate in the tract (crimes/population), and the crime density in the tract (crimes/acre). The latter variable is
+
+our preferred measure because, as we document below, it explains the most variation in our dependent
+
+variable (the change in the price index).
+18 For a discussion on instrumentation in distributed lag models, see Wooldridge (2002, p. 307).
+19 Recall that we exclude one of the seven indexed crimes (namely, rape) because the location of these
+
+crimes is not reported.
+20 P-values on the F-statistics, which are robust to both heteroskedasticity and serial correlation, are in all
+cases equal to .000. In the case where sequential exogeneity is assumed and just Ct is instrumented, there
+are only two endogenous variables. With three or fewer endogenous variables, Stock and Yogo's (2005)
+test for weak instruments can be done. Weak instruments refer to instruments whose correlation with an
+endogenous variable is not strong enough to avoid a biased IV estimator. Stock and Yogo's test involves
+
+comparing the first-stage F-statistic to a critical value. In our case the critical value is 11 and the two F-
+
+statistics are 17 (violent crime) and 13 (property crime); hence we can conclude that our instruments are not
+`weak.'
+21We also estimated (2) excluding from the set of instruments those land use categories that represent
+shopping, eating and drinking establishments. This change had little effect on our results. When
+instrumenting Ct, the estimated LRP on violent crime is -1236 (versus -1177 using the full set of
+commercial land uses) and the estimated elasticity of the house price index with respect to violent crime is -
+.250 (versus -.238 using all commercial land uses). When instrumenting both Ct and Ct-1, the estimated
+LRP is -1042 (versus -1020) and the estimated elasticity is -.210 (versus -.206).
+22 Home buyers may also feel that their homeowner's insurance protects them from the monetary losses that
+may result from property crime.
+

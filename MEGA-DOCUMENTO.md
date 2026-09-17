@@ -685,6 +685,64 @@ Si el Perú avanza al Modelo 1 o completa el Modelo 3, este producto se conviert
 
 ---
 
+## 9.8 Función clave — Índice de Incidencia con Semáforo
+
+> Especificación completa en [`docs/05-producto/03-funcion-clave-indice-incidencia.md`](docs/05-producto/03-funcion-clave-indice-incidencia.md). Esta sección resume la pieza central del producto: no cinco capas genéricas, sino **una función con metodología propia, citable y no replicada por ningún competidor identificado.**
+
+### Por qué es la función clave y no una capa más
+
+Es el único de los seis verticales con **metodología estadística propia**. Las demás capas agregan fuentes existentes; esta corrige, combina y clasifica.
+
+### La fórmula — adoptada del INEI, no inventada
+
+El Perú ya tiene una propuesta oficial de índice de inseguridad subnacional (INEI, 2023), con **promedio geométrico** entre componentes correlacionados y **bandas categóricas oficiales**. Este proyecto adapta esa lógica a una escala accionable:
+
+```
+IIP_zona = (D_corregida^0.6 × R_ciudadana^0.4)^(1/(0.6+0.4))
+```
+
+| Componente | Definición | Fuente |
+|---|---|---|
+| `D_corregida` | Denuncia oficial corregida por un factor de subregistro (razón victimización encuestada / denuncia observada, a nivel distrital) | MININTER + ENAPRES/UCSP |
+| `R_ciudadana` | Tasa de reportes ciudadanos verificados, geolocalizados, con categoría cerrada | Generada por el propio producto |
+
+Cada hecho se pondera por severidad antes de calcular la tasa —siguiendo el Crime Harm Index de Cambridge y su adaptación danesa—, porque **contar todo delito como unidad equivalente distorsiona la tendencia real**: entre 2011 y 2016 el conteo de delitos en Dinamarca cayó 14 % mientras el índice ponderado por gravedad subió hasta 6 %.
+
+### El semáforo — tres colores, cinco bandas oficiales debajo
+
+| Bandas INEI | Semáforo |
+|---|---|
+| 0,00–0,20 Muy baja · 0,21–0,40 Baja | 🟢 Bajo |
+| 0,41–0,60 Media | 🟡 Medio |
+| 0,61–0,80 Alta · 0,81–1,00 Muy alta | 🔴 Alto |
+
+### La evidencia empírica que justifica el diseño híbrido
+
+Se documentó una discrepancia real entre tres fuentes serias sobre Arequipa:
+
+| Fuente | Metodología | Resultado |
+|---|---|---|
+| INEI — IIC (2023) | Índice administrativo compuesto | Arequipa **por debajo** del promedio nacional (0,357 vs. 0,37) |
+| MININTER — Qawaq (2019) | Ranking de denuncias entre ciudades | Arequipa en posición **media** (33,0 %) |
+| UCSP / prensa (2025) | Encuesta directa de victimización | Arequipa la **más alta** del país (33,5 %) |
+
+> Tres metodologías, tres resultados distintos. Esa discrepancia **es la prueba empírica**, no una opinión de diseño, de que ninguna fuente única —denuncia, índice administrativo o encuesta puntual— captura la incidencia real por sí sola. Detalle completo en [`docs/00-evaluacion/04-referencias-academicas.md`](docs/00-evaluacion/04-referencias-academicas.md).
+
+### Por qué ningún competidor la replica
+
+| Fuente existente | Qué le falta frente a la función clave |
+|---|---|
+| Mapa del Delito — MININTER | Sin corrección de subregistro, sin índice, sin reportes ciudadanos |
+| IIC — INEI | Riguroso pero académico/administrativo; no está embebido en una decisión de compra ni incorpora reportes ciudadanos |
+| **UbicaBien** (auditoría verificada) | **Cero capa delictiva, en cualquier forma** |
+| SpotCrime | Híbrido denuncia + reporte que sí funciona — pero solo en Estados Unidos |
+
+### Límite declarado
+
+El modelo de frontera estocástica que usa el INEI para corregir subregistro excede el alcance de un proyecto de curso. Se adopta un proxy transparente (razón victimización/denuncia a nivel distrital) y se declara la ruta hacia el método completo como trabajo futuro — no se simula un rigor que no existe.
+
+---
+
 # 10. Plan de validación
 
 Detalle en [`docs/00-evaluacion/02-dossier-evidencia.md`](docs/00-evaluacion/02-dossier-evidencia.md).
@@ -828,12 +886,36 @@ Esta sección existe porque un trabajo que no declara sus límites no es investi
 | L8 | La capa delictiva tiene cifra negra y problema de resolución espacial | Requiere calibración con victimización y validación de geocodificación |
 | L9 | El modelo hedónico presenta endogeneidad | ¿El delito reduce el precio o los barrios baratos atraen delito? Debe tratarse |
 | L10 | Datos de mercado inmobiliario de Arequipa 2025–2026 no obtenidos con detalle | El TAM local no está dimensionado |
-| L11 | **La cobertura real de UbicaBien no fue verificada dentro del producto autenticado** | Toda afirmación sobre lo que **no** cubre es inferencia a partir de su sitio público. Debe ejecutarse V1–V4 de `docs/04-startups/ubicabien.md` |
-| L12 | **No se determinó si UbicaBien ya digitalizó la zonificación de Arequipa** | Si lo hizo, la ventaja competitiva declarada en la sección 9 está tomada o compartida |
+| L11 | ~~La cobertura real de UbicaBien no fue verificada dentro del producto autenticado~~ | **RESUELTO** — auditoría V1–V4 ejecutada el 16-09-2026, ver `docs/04-startups/ubicabien-auditoria.md` |
+| L12 | ~~No se determinó si UbicaBien ya digitalizó la zonificación de Arequipa~~ | **RESUELTO — NO la digitalizó.** Nueve campos en «Próximamente» |
+| L13 | **El factor de corrección de subregistro de la función clave (§9.8) es un proxy de razón simple, no el modelo de frontera estocástica que usa el INEI** | Declarado explícitamente como límite de alcance de curso, no oculto. Ruta hacia el método completo en `docs/00-evaluacion/04-referencias-academicas.md` |
+| L14 | **La cobertura real del Código Único Catastral (CUC) en el distrito piloto no está verificada** | Ver riesgos R10–R11 en `docs/01-verticales/v1b-catastro-sncp.md`. No se puede asumir que resuelve el problema del identificador único sin confirmarlo en campo |
+| L15 | **Los pesos de la fórmula del índice de incidencia (0.6/0.4, y la ponderación por severidad) son de arranque, no calibrados con datos reales de Arequipa** | Declarado en `docs/05-producto/03-funcion-clave-indice-incidencia.md` §4.4 como decisión de calibración posterior |
 
 ---
 
 # 13. Bibliografía
+
+## Literatura académica Q1–Q4 (descargada — ver `referencias/pdf/` y catálogo completo en `docs/00-evaluacion/04-referencias-academicas.md`)
+
+A1. INEI (2023). *La inseguridad ciudadana en el Perú: una propuesta de índice a nivel subnacional desde datos administrativos.* [PDF — 84 pp.](referencias/pdf/INEI_propuesta_indice_inseguridad.pdf)
+A2. Riascos Villegas, Ñungo, Gómez Tobón, Dulce Rubio, Gómez (2023). *Modelling underreported spatio-temporal crime events.* PLOS ONE 18(7). **Q1.** [PDF](referencias/pdf/PLOS_ONE_Modelling_Underreported_Crime.pdf)
+A3. Ihlanfeldt, K., Mayock, T. (2010). *Panel data estimates of the effects of different types of crime on housing prices.* Regional Science and Urban Economics 40(2-3). **Q1 — SJR 1.472.** [PDF](referencias/pdf/FSU_Ihlanfeldt_Mayock_Crime_Housing_Prices.pdf)
+A4. Andersen, H. A., Mueller-Johnson, K. (2018). *The Danish Crime Harm Index: How It Works and Why It Matters.* Cambridge Journal of Evidence-Based Policing 2, 52–69. [PDF](referencias/pdf/Danish_Crime_Harm_Index_Springer.pdf)
+A5. Sherman, L. W., Neyroud, P., Neyroud, E. (2016). *The Cambridge Crime Harm Index.* Policing: A Journal of Policy and Practice 10(3). Q2.
+A6–A7. Housing prices and crime perception (Barcelona) y hedonic violence valuation (Acapulco) — Empirical Economics, **Q1**, SJR 0.76.
+A9–A10. Willingness to pay for water — Sri Lanka (Letters in Spatial and Resource Sciences, **Q2**), Mexico City, Indonesia (revisión de literatura de desarrollo).
+B1. [INEI — Victimización en el Perú 2024](referencias/pdf/INEI_Victimizacion_Peru_2024.pdf)
+B2. [INEI — Boletín de Seguridad Ciudadana ene-jun 2024](referencias/pdf/INEI_Boletin_Seguridad_Ciudadana_2024.pdf)
+B3. [MININTER — Reporte Qawaq 1, victimización cifras esenciales](referencias/pdf/MININTER_Qawaq_Victimizacion_Cifras_Esenciales.pdf)
+
+## Catastro e identificador único (corrección)
+
+C1. [SNCP — Sistema Nacional Integrado de Catastro](https://sncp.gob.pe/) · C2. [Ley N.° 28294 — Ley que crea el SNCP](https://www.ipdu.pe/legislacion/ley/28294.pdf) · C3. [Preguntas Frecuentes SNCP](https://sncp.gob.pe/preguntas-frecuentes/)
+
+## Datos abiertos Perú
+
+D1. [Plataforma Nacional de Datos Abiertos — PNDA](https://www.datosabiertos.gob.pe/) · D2. [PNDA — Observatorio MININTER](https://datosabiertos.gob.pe/harvest_source/observatorio-ministerio-del-interior)
 
 ## Benchmark internacional
 

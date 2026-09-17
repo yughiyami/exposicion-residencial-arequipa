@@ -26,3 +26,14 @@ delictiva,UCSP,Encuesta de victimizacion y percepcion de seguridad Arequipa,http
 delictiva,INEI,Estadisticas de seguridad ciudadana,https://www.inei.gob.pe/media/MenuRecursivo/boletines/estadisticas-de-seguridad-ciudadana-enero-junio-2024.pdf,pdf,publico,no,no,alta,2026-09-16
 formalizacion,COFOPRI,Campanas de formalizacion predial Arequipa,https://www.gob.pe/institucion/cofopri/noticias/774559-arequipa-cofopri-visitara-mas-de-700-lotes-urbanos-considerados-para-campana-gratuita-de-empadronamiento,web,publico,no,no,media,2026-09-16
 politica,PCM,Catalogo de aplicaciones con IA en el Estado peruano,https://www.gob.pe/institucion/pcm/informes-publicaciones/6879780-catalogo-de-aplicaciones-con-inteligencia-artificial-en-el-estado-peruano,publicacion,publico,no,no,alta,2026-09-16
+catastral,SNCP,Portal del Sistema Nacional Integrado de Catastro,https://sncp.gob.pe/,portal institucional,publico,parcial,no,media,2026-09-17
+catastral,SNCP,Preguntas Frecuentes SNCP,https://sncp.gob.pe/preguntas-frecuentes/,web,publico,no,no,alta,2026-09-17
+transversal,PCM,Plataforma Nacional de Datos Abiertos PNDA,https://www.datosabiertos.gob.pe/,portal de datos abiertos,publico,parcial,parcial,alta,2026-09-17
+transversal,PCM,PNDA Observatorio Ministerio del Interior,https://datosabiertos.gob.pe/harvest_source/observatorio-ministerio-del-interior,dataset harvester,publico,parcial,no,media,2026-09-17
+delictiva,INEI,Propuesta de indice de inseguridad ciudadana subnacional,referencias/pdf/INEI_propuesta_indice_inseguridad.pdf,pdf descargado,publico,no,no,alta,2026-09-17
+delictiva,INEI,Victimizacion en el Peru 2024,referencias/pdf/INEI_Victimizacion_Peru_2024.pdf,pdf descargado,publico,no,no,alta,2026-09-17
+delictiva,INEI,Boletin estadisticas de seguridad ciudadana ene-jun 2024,referencias/pdf/INEI_Boletin_Seguridad_Ciudadana_2024.pdf,pdf descargado,publico,no,no,alta,2026-09-17
+delictiva,MININTER,Reporte Qawaq 1 victimizacion cifras esenciales,referencias/pdf/MININTER_Qawaq_Victimizacion_Cifras_Esenciales.pdf,pdf descargado,publico,no,no,alta,2026-09-17
+academica,PLOS ONE,Modelling underreported spatio-temporal crime events Bogota,referencias/pdf/PLOS_ONE_Modelling_Underreported_Crime.pdf,pdf descargado Q1,publico,no,no,alta,2026-09-17
+academica,Regional Science and Urban Economics,Panel data crime and housing prices Ihlanfeldt Mayock,referencias/pdf/FSU_Ihlanfeldt_Mayock_Crime_Housing_Prices.pdf,pdf descargado Q1,publico,no,no,alta,2026-09-17
+academica,Cambridge J Evidence Based Policing,Danish Crime Harm Index,referencias/pdf/Danish_Crime_Harm_Index_Springer.pdf,pdf descargado,publico,no,no,alta,2026-09-17

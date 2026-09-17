@@ -9,10 +9,12 @@ Toda decisión residencial informada requiere responder cinco preguntas. Cada un
 | # | Vertical | Pregunta del ciudadano | Institución soberana | Formato actual | Brecha | Dificultad técnica |
 |---|---|---|---|---|---|---|
 | [1](v1-registral.md) | Legal / registral | ¿Es legalmente transferible? | SUNARP | Geovisor web, sin API | Acceso automatizado | Media |
+| [1b](v1b-catastro-sncp.md) | **Catastral** (corrección: no es SUNARP) | ¿Está delimitado técnicamente y con identificador único? | **SNCP** — SUNARP preside, **COFOPRI** es Secretaría Técnica | Código Único Catastral, cobertura desigual | Adopción real del CUC por municipalidad | Media |
 | [2](v2-urbanistico.md) | Urbanístico | ¿Se puede construir y habilitar? | Municipalidad distrital | PDF | **Estructuración del dato** | **Alta** |
 | [3](v3-peligro.md) | Peligro físico | ¿Es físicamente seguro? | CENEPRED / ANA / IGP | Plataforma geoespacial | Cobertura desigual | Baja |
-| [4](v4-servicios.md) | Servicios básicos | ¿Tendrá agua y desagüe? | EPS (SEDAPAR) / SEAL | Expediente presencial | **Inexistencia de canal digital** | **Muy alta** |
-| [5](v5-delictiva.md) | Exposición delictiva | ¿Es tolerable vivir ahí? | MININTER / INEI | Geovisor y estadística | Subregistro y resolución espacial | Media |
+| [4](v4-servicios.md) | Servicios básicos | ¿Tendrá agua y desagüe? | EPS (SEDAPAR) / SEAL — proxy vía INEI 2017 | Expediente presencial | **Inexistencia de canal digital** | **Muy alta** |
+| [5](v5-delictiva.md) → [función clave](../05-producto/03-funcion-clave-indice-incidencia.md) | **Exposición delictiva** | ¿Es tolerable vivir ahí? | MININTER / INEI + **reportes ciudadanos** | Índice propio con semáforo | Subregistro — **resuelto por diseño híbrido**, no solo declarado | Media–Alta (metodología propia) |
+| 6 | Derechos mineros *(incorporado tras auditar a UbicaBien)* | ¿Hay una concesión minera titulada sobre el predio? | INGEMMET | Catastro minero, GeoJSON público | Ninguna — dato ya accesible | Baja |
 
 ---
 
@@ -48,13 +50,13 @@ Vertical 5 — Delictiva      ███████░░░  Geovisor público,
 
 ---
 
-## El problema del identificador único
+## El problema del identificador único — con una corrección importante
 
 Países Bajos y Estonia resolvieron la integración con una regla simple: **el mismo identificador único para el mismo predio en todos los registros**. España cumple la misma función con la referencia catastral.
 
-En el Perú no existe una clave universal de predio compartida entre SUNARP, las municipalidades y los prestadores de servicios.
+**Corrección respecto de la versión anterior de este documento:** el Perú **sí tiene** un candidato formal a esa clave — el **Código Único Catastral (CUC)**, asignado por COFOPRI como Secretaría Técnica del SNCP (ver [`v1b-catastro-sncp.md`](v1b-catastro-sncp.md)). Lo que no está verificado es su **adopción real y consistente** entre SUNARP, las municipalidades y los prestadores de servicios — que es, en la práctica, el mismo problema, pero con causa distinta: no es ausencia normativa, es brecha de implementación.
 
-**Consecuencia para la arquitectura del producto:** la vinculación entre capas debe resolverse por **coincidencia geográfica** (intersección espacial de coordenadas y polígonos), lo cual introduce error de asignación. Esta limitación debe declararse explícitamente en la documentación técnica y reflejarse en el nivel de confianza que el reporte comunica al usuario.
+**Consecuencia para la arquitectura del producto:** mientras no se verifique la cobertura real del CUC en el distrito piloto, la vinculación entre capas debe resolverse por **coincidencia geográfica** (intersección espacial de coordenadas y polígonos), lo cual introduce error de asignación. Esta limitación debe declararse explícitamente en la documentación técnica y reflejarse en el nivel de confianza que el reporte comunica al usuario.
 
 ---
 
